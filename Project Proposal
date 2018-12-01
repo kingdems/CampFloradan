@@ -1,3 +1,11 @@
-The purpose of this project is to computerize the process of filing and information storage for Camp Floradan in Putnam Valley, New York. Things that are needed but not limited to creating a server and database to store the information. Things to add/create are to create an address book with the information of the campers, the ability to store information on the pool, the ability to have a lunch account with money stored while being encrypted. Then there is the ability to store medical information for the nurses (This also has to be encrypted). Then there should be an ability to create a list for billing as well as the ability to update any information that has been put into the database.
-Languages that I assume to use are HTML, PHP, MySQL, and JavaScript.
-This idea is to help the directors of Camp Floradan and make their book keeping easier and help with information in case of any emergency occurs. As well as the ability to log information about other things that are kept by hand at the moment.
+  The purpose of this project is to computerize the process of filing and information storage for Camp Floradan in Putnam Valley, New York.
+Things that are needed but not limited to creating a server and database to store the information. Things to add/create are to create an 
+address book with the information of the campers, the ability to store information on the pool, the ability to have a lunch account with 
+money stored while being encrypted. Then there is the ability to store medical information for the nurses (This also has to be encrypted). 
+Then there should be an ability to create a list for billing as well as the ability to update any information that has been put into the 
+database.
+
+  Languages that I assume to use are HTML, PHP, MySQL, and JavaScript.
+  
+  This idea is to help the directors of Camp Floradan and make their book keeping easier and help with information in case of any emergency
+occurs. As well as the ability to log information about other things that are kept by hand at the moment.
