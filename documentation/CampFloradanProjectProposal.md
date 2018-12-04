@@ -1,11 +1,15 @@
-Camp Floradan Project Proposal
+#Camp Floradan Project Proposal
 ________________________________________
 Creator: Jacob deMey
+
 Project Description
 Camp Floradan will have a new computerized method of expense tracking as well as a more up-to-date data storage system.
 Service Need
+
 Camp Floradan of Putnam Valley in New York has a need for the ability to track data is a computerized fashion rather than the traditional by hand method they are still using today. A way to store valuable information on campers’ medical forms. There is also a need for the app to be used by individuals who have very little to no technical literacy, and having the ability to view data in an easy to read format.
+
 Project Purpose & Scope
+
 The purpose of this project is to help eliminate any human error and allow for easier tracking of bookkeeping. This will also provide a way to easily represent and view information.
 Technical Challenges / Issues
 There is no software or any process in place as of right now. Everything is being handled as new and being tested by the users that will eventually use this project in the years to come. These users have very low technical literacy and will be using the system extensively. To make it easier to access the information I would also like to access the app through mobile.
@@ -20,7 +24,7 @@ Ensure mobile usability	TBD
 
 Requirements
 Functional Requirements
- jhbhbh
+ 
 Primary:
  
 1.     Users will be able to input data.
