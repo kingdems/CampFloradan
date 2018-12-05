@@ -32,3 +32,13 @@
 .btn {
     passing: 5px;
 }
+
+.lower {
+    top: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.addpad2 {
+    padding-top: 20px;
+}
