@@ -29,6 +29,12 @@
     padding: 0px 10px;
 }
 
+.imgsize {
+    width: 160px;
+}
+table,th,td{
+    border: 1px solid black;
+}
 .btn {
     passing: 5px;
 }
@@ -41,4 +47,8 @@
 
 .addpad2 {
     padding-top: 20px;
+}
+
+.floater{
+    float: left;
 }
