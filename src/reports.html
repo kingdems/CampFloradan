@@ -2,7 +2,15 @@
 
 <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script
+
 
 </head>
 <body>
@@ -18,6 +26,45 @@
     <a href="reports.html">Reports</a>
 </div>
 
+
+<div class="main">
+
+    <h1>Reports</h1>
+    <h3>What reports would you like to view:</h3>
+    <form action="createSG.php" method="post">
+        <div class="form-group">
+            <input type="checkbox" name="accrec" value="accrec"> Accounts Recievable
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="maillist" value="maillist"> Mailing List
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="attendance" value="attendance">Attendance
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="expenses" value="attendance">Expenses
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="pool" value="attendance">Pool Records
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="medical" value="attendance">Medical
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="nurselog" value="attendance">Nurse Log
+        </div>
+        <div class="form-group">
+            <label for="application">What application would you like to export to? </label>
+            <select name="application">
+                <option value="PDF">PDF</option>
+                <option value="Excel">Excel</option>
+            </select>
+        </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+</div>
 </body>
 
 </html>

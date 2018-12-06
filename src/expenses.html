@@ -2,7 +2,15 @@
 
 <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script
+
 
 </head>
 <body>
@@ -18,6 +26,61 @@
     <a href="reports.html">Reports</a>
 </div>
 
+<div class="main">
+
+    <h1>Expenses</h1>
+    <form action="expense.php" method="post">
+        <div class="form-group">
+            <label for="Section">What Section? </label>
+            <select name="section">
+                <option value="Drivers">Drivers</option>
+                <option value="Nurses">Nurses</option>
+                <option value="Salary Advances">Salary Advances</option>
+                <option value="Snack">Snack</option>
+                <option value="Rainy Day">Rainy Day</option>
+                <option value="Gas">Gas</option>
+                <option value="BBQ">BBQ</option>
+                <option value="Sports">Sports</option>
+                <option value="A&C">A&C</option>
+                <option value="Misc">Misc</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="amt">Amount </label>
+            <input type="text" class="form-control" id="amt" placeholder="Enter the amount" name="amt">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <table width="750">
+        <colgroup><col><col><col><col></colgroup>
+        <tr>
+            <th>Date</th>
+            <th>Person</th>
+            <th>Expense</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td height="50"></td>
+            <td height="50"></td>
+            <td height="50"></td>
+            <td height="50"></td>
+        </tr>
+        <tr>
+            <td height="50"></td>
+            <td height="50"></td>
+            <td height="50"></td>
+            <td height="50"></td>
+        </tr>
+        <tr>
+            <td height="50"></td>
+            <td height="50"></td>
+            <td height="50"></td>
+            <td height="50"></td>
+        </tr>
+
+    </table>
+</div>
 </body>
 
 </html>
