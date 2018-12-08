@@ -1,0 +1,3 @@
+# Week 2 Log
+
+This week I have completed most of the HTML code. There was a section that was giving me trouble with locking a specific input section that needed a input to be selected above it. I have figured it out tho using some JavaScript code within the html code though. I have still been researching a server and looking into the t1.micro server that amazon sells. as well as looking into local host set ups such as xampp which is what I am leaning towards as of now. My next step in this process is to try and finish the HTML code and have that all set up so that I can focus on the server situation as well as creating the PHP code to interact the web application with the server and allow for data to be saved in the tables from the web app.
