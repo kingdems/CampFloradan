@@ -29,17 +29,48 @@
     <h1>Accounts Reciaveable</h1>
     <form action="createSG.php" method="post">
         <div class="form-group">
-            <label for="Section">What Section? </label>
-            <select name="section">
+            <label for="section">What Section? </label>
+            <select name="section" id="section">
                 <option value="Tuition">Tuition</option>
                 <option value="Transportation">Transportation</option>
-                <option value="Payment1">Payment1</option>
-                <option value="Payment2">Payment2</option>
-                <option value="Payment3">Payment3</option>
-                <option value="Payment4">Payment4</option>
-                <option value="Payment5">Payment5</option>
+                <option value="Payment">Payment</option>
             </select>
         </div>
+        <div class="form-group">
+            <label for="pmtnum">Payment Number</label>
+            <select name="pmtnum" id="pmtnum" disabled="">
+                <option value="0">Does Not Apply</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <script type="text/javascript">
+
+            let sec = document.getElementById("section");
+            let pmt = document.getElementById("pmtnum");
+
+            console.log(sec.value);
+            console.log(pmt.value);
+            sec.addEventListener('change', function(event){
+                if(sec.value == "Payment") {
+                    pmt.disabled = !pmt.disabled;
+                    console.log(pmt.disabled)
+                }
+                else{
+                    pmt.disabled = true;
+                    pmt.value = 0;
+                    console.log("disable is on. set to true");
+                }
+            });
+            sec.addEventListener('change', function(event){
+                alert("Value changed");
+            });
+
+
+        </script>
         <div class="form-group">
             <label for="amt">Amount </label>
             <input type="text" class="form-control" id="amt" placeholder="Enter the amount" name="amt">
