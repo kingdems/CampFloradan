@@ -1,0 +1,3 @@
+## Week 3 Log
+
+This week has been mostly about looking into an aws (Amazon Web Services) server which is a Cloud Based Server. The purpose of this is to go about attempting to have a server with a database that can be online and accessible through a web application. I have almost all of my HTML coding done with the exception to a couple pages that I would like to talk with my grandfather about, and how he would like to easily enter data. The goal for the next week coming up is to look furthi
