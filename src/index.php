@@ -3,8 +3,8 @@
 
 <?php
 session_start();
-$username = $_POST["username"];
-$pwd = $_POST["pwd"];
+$username = $_POST["usernameLogin"];
+$pwd = $_POST["pwdLogin"];
 $db = "campfloradan";
 
 
