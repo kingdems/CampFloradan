@@ -18,6 +18,9 @@ $_SESSION['user'] = $username;
 //$pwd = crypt($pwd, '$2a$07$usesomesillystringforsalt$');
 $sql = "SELECT ID FROM users WHERE username = '$username' and pwd = '$pwd'";
 
+var_dump($pwd);
+var_dump($username);
+
 $result = mysqli_query($conn,$sql);
 var_dump($result);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
