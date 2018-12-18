@@ -3,7 +3,6 @@
 
 <?php
 session_start();
-var_dump($_POST["username"]);
 $username = $_POST["username"];
 $pwd = $_POST["pwd"];
 $db = "campfloradan";
