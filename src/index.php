@@ -20,6 +20,7 @@ $sql = "SELECT ID FROM users WHERE username = '$username' and pwd = '$pwd'";
 
 var_dump($pwd);
 var_dump($username);
+var_dump($sql);
 
 $result = mysqli_query($conn,$sql);
 var_dump($result);
