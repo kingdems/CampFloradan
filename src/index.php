@@ -15,7 +15,7 @@ if (!$conn) {
 }
 $_SESSION['user'] = $username;
 
-$pwd = crypt($pwd, '$2a$07$usesomesillystringforsalt$');
+//$pwd = crypt($pwd, '$2a$07$usesomesillystringforsalt$');
 $sql = "SELECT ID FROM users WHERE username = '$username' and pwd = '$pwd'";
 
 $result = mysqli_query($conn,$sql);
