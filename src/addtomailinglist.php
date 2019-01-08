@@ -54,7 +54,7 @@ $sql = "INSERT INTO campers (fname, lname, age, campGroup, emergencynumber, grad
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-$sql = "SELECT camperID FROM campers WHERE fname = $fname AND lname = $lname";
+$sql = "SELECT camperID FROM campers WHERE fname = '$fname' AND lname = '$lname'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
