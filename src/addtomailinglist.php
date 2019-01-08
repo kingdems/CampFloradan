@@ -25,26 +25,26 @@ else{
     }
 $campGroup = NULL;
 switch($grade){
-    case (kindergarten || 1){
+    case (kindergarten || 1):
         $groupvar = "Group 1";
         $campGroup = $groupvar;
-        }
-    case (2 || 3){
+        break;
+    case (2 || 3):
             $groupvar = $genvar . "2";
             $campGroup = $groupvar;
-            }
-    case (4 || 5){
+            break;
+    case (4 || 5):
             $groupvar = $genvar . "3";
             $campGroup = $groupvar;
-            }
-    case (6 || 8){
+            break;
+    case (6 || 8):
             $groupvar = $genvar . "4";
             $campGroup = $groupvar;
-            }
-    case (8 || 9){
+            break;
+    case (8 || 9):
             $groupvar = "CIT" . $genvar;
             $campGroup = $groupvar;
-            }
+            break;
 }
 
 // Create camper inside campers table
