@@ -59,9 +59,9 @@ if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 //Setting other ID's
-$ID = $sql
-$accRecID = $sql
-$payID = $sql
+$ID = $sql;
+$accRecID = $sql;
+$payID = $sql;
 
 //insert other ID's
 $sql = "INSERT INTO campers (accRecID, payID) VALUES ('$accRecID', '$payID')";
