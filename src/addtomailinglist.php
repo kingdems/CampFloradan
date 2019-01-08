@@ -10,6 +10,8 @@ $age = $_POST["age"];
 $emgNum = $_POST["emgnum"];
 $gender = $_POST["gender"];
 $grade = $_POST["grade"];
+$accRecID = NULL;
+$payID = NULL;
 
 
 $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
