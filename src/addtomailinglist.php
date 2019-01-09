@@ -31,22 +31,27 @@ switch($grade){
     case (kindergarten || 1):
         $groupvar = "Group 1";
         $campGroup = $groupvar;
+        echo "Group 1";
         break;
     case (2 || 3):
             $groupvar = $genvar . "2";
             $campGroup = $groupvar;
+            echo "Group 2";
             break;
     case (4 || 5):
             $groupvar = $genvar . "3";
             $campGroup = $groupvar;
+            echo "Group 3";
             break;
     case (6 || 8):
             $groupvar = $genvar . "4";
             $campGroup = $groupvar;
+            echo "Group 4";
             break;
     case (8 || 9):
             $groupvar = "CIT" . $genvar;
             $campGroup = $groupvar;
+            echo "Group CIT";
             break;
 }
 
