@@ -12,6 +12,7 @@ $gender = $_POST["gender"];
 $grade = $_POST["grade"];
 $accRecID = NULL;
 $payID = NULL;
+$genvar = NULL;
 
 
 $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
@@ -50,7 +51,7 @@ switch($grade){
 }
 
 // Create camper inside campers table
-$sql = "INSERT INTO campers (fname, lname, age, campGroup, emergencynumber, grade) VALUES ('$fname', '$lname', '$age', '$campGroup', '$emgNum','$grade')";
+$sql = "INSERT INTO campers (fname, lname, age, campGroup, emgnum, grade) VALUES ('$fname', '$lname', '$age', '$campGroup', '$emgNum','$grade')";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
