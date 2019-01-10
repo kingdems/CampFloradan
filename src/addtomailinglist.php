@@ -27,31 +27,28 @@ else{
     $genvar = G;
     }
 $campGroup = NULL;
+echo"<br>$grade<br>"
 switch($grade){
-    case (kindergarten || 1):
+    case (kindergarten or 1):
         $groupvar = "Group 1";
         $campGroup = $groupvar;
-        echo "Group 1";
+        echo"<br>Group1<br>"
         break;
-    case (2 || 3):
+    case (2 or 3):
             $groupvar = $genvar . "2";
             $campGroup = $groupvar;
-            echo "Group 2";
             break;
-    case (4 || 5):
+    case (4 or 5):
             $groupvar = $genvar . "3";
             $campGroup = $groupvar;
-            echo "Group 3";
             break;
-    case (6 || 8):
+    case (6 or 8):
             $groupvar = $genvar . "4";
             $campGroup = $groupvar;
-            echo "Group 4";
             break;
-    case (8 || 9):
+    case (8 or 9):
             $groupvar = "CIT" . $genvar;
             $campGroup = $groupvar;
-            echo "Group CIT";
             break;
 }
 
@@ -64,8 +61,11 @@ $sql = "SELECT camperID FROM campers WHERE fname = '$fname' AND lname = '$lname'
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+
+$ID = $conn->query($sql);
+echo "<br>$ID<br>"
 //Setting other ID's
-$ID = $sql;
+//$ID = $sql;
 $accRecID = $sql;
 $payID = $sql;
 
