@@ -21,32 +21,32 @@ if (!$conn) {
 }
 //setting group
 if($gender == "male"){
-    $genvar = B;
+    $genvar = "B";
     }
 else{
-    $genvar = G;
+    $genvar = "G";
     }
 $campGroup = NULL;
 echo"<br>$grade<br>";
 switch($grade){
-    case (kindergarten or 1):
+    case ("kindergarten" or "1"):
         $groupvar = "Group 1";
         $campGroup = $groupvar;
         echo"<br>Group1<br>";
         break;
-    case (2 or 3):
+    case ("2" or "3"):
             $groupvar = $genvar . "2";
             $campGroup = $groupvar;
             break;
-    case (4 or 5):
+    case ("4" or "5"):
             $groupvar = $genvar . "3";
             $campGroup = $groupvar;
             break;
-    case (6 or 8):
+    case ("6" or "8"):
             $groupvar = $genvar . "4";
             $campGroup = $groupvar;
             break;
-    case (8 or 9):
+    case ("8" or "9"):
             $groupvar = "CIT" . $genvar;
             $campGroup = $groupvar;
             break;
