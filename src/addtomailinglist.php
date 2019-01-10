@@ -59,7 +59,8 @@ if (!mysqli_query($conn, $sql)){
 }
 
 $ID = $conn->query($sql);
-echo "<br>$ID["id"]<br>";
+$row = $ID->fetch_assoc();
+echo "<br>$row["id"]<br>";
 //Setting other ID's
 //$ID = $sql;
 $accRecID = $sql;
