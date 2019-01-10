@@ -60,11 +60,11 @@ if (!mysqli_query($conn, $sql)){
 
 $ID = $conn->query($sql);
 $row = $ID->fetch_assoc();
-echo "<br>$row["id"]<br>";
+//echo "<br>$row["id"]<br>";
 //Setting other ID's
 //$ID = $sql;
-$accRecID = $sql;
-$payID = $sql;
+$accRecID = $row["camperID"];
+$payID = $row["camperID"];
 
 //insert other ID's
 $sql = "INSERT INTO campers (accRecID, payID) VALUES ('$accRecID', '$payID')";
