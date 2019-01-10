@@ -28,7 +28,7 @@ else{
     }
 $campGroup = NULL;
 echo"<br>$grade<br>";
-    if ($grade == "kindergarten" or $grade == "1"{
+    if ($grade == "kindergarten" or $grade == "1"){
          $groupvar = "Group 1";
          $campGroup = $groupvar;
     }
