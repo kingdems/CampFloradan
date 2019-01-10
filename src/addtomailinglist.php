@@ -62,12 +62,16 @@ $ID = $conn->query($sql);
 $row = $ID->fetch_assoc();
 //echo "<br>$row["id"]<br>";
 //Setting other ID's
-//$ID = $sql;
+$ID = $row["camperID"];
 $accRecID = $row["camperID"];
 $payID = $row["camperID"];
 
 //insert other ID's
-$sql = "INSERT INTO campers (accRecID, payID) VALUES ('$accRecID', '$payID')";
+$sql = "UPDATE campers SET accRecID = '$accRecID'  WHERE camperID = '$ID'";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+$sql = "UPDATE campers SET payID = '$payID'  WHERE camperID = '$ID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
