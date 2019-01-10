@@ -32,19 +32,19 @@ echo"<br>$grade<br>";
          $groupvar = "Group 1";
          $campGroup = $groupvar;
     }
-    else if($grade == "2" or $grade == "3"{
+    else if($grade == "2" or $grade == "3"){
              $groupvar = $genvar . "4";
              $campGroup = $groupvar;
                  }
-                 else if($grade == "4" or $grade == "5"{
+                 else if($grade == "4" or $grade == "5"){
                               $groupvar = $genvar . "4";
                               $campGroup = $groupvar;
                                   }
-                                  else if($grade == "6" or $grade == "7"{
+                                  else if($grade == "6" or $grade == "7"){
                                                $groupvar = $genvar . "4";
                                                $campGroup = $groupvar;
                                                    }
-                                                   else if($grade == "8" or $grade == "9"{
+                                                   else if($grade == "8" or $grade == "9"){
                                                                 $groupvar = "CIT" . $genvar;
                                                                 $campGroup = $groupvar;
                                                                     }
