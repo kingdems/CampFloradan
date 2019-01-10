@@ -12,7 +12,14 @@
 </head>
 
 <body>
+<?php
 
+$sql = "INSERT INTO campers (fname, lname, age, campGroup, emgnum, grade) VALUES ('$fname', '$lname', '$age', '$campGroup', '$emgNum','$grade')";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+?>
 
     <div class = "sidenav">
         <img class="imgsize" src="camp.jpeg" />
@@ -49,6 +56,10 @@
             </select>
         </div>
         <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" placeholder="Enter the last name" name="lname">
+                </div>
+        <div class="form-group">
             <label for="amt">Amount </label>
             <input type="text" class="form-control" id="amt" placeholder="Enter the amount" name="amt">
         </div>
@@ -65,7 +76,7 @@
             <th>Amount</th>
         </tr>
         <tr>
-            <td height="50"><></td>
+            <td height="50"></td>
             <td height="50"></td>
             <td height="50"></td>
             <td height="50"></td>
