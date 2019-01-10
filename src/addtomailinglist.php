@@ -28,30 +28,26 @@ else{
     }
 $campGroup = NULL;
 echo"<br>$grade<br>";
-switch($grade){
-    case ("kindergarten" or "1"):
-        $groupvar = "Group 1";
-        $campGroup = $groupvar;
-        echo"<br>Group1<br>";
-        break;
-    case ("2" or "3"):
-            $groupvar = $genvar . "2";
-            $campGroup = $groupvar;
-            break;
-    case ("4" or "5"):
-            $groupvar = $genvar . "3";
-            $campGroup = $groupvar;
-            break;
-    case ("6" or "8"):
-            $groupvar = $genvar . "4";
-            $campGroup = $groupvar;
-            break;
-    case ("8" or "9"):
-            $groupvar = "CIT" . $genvar;
-            $campGroup = $groupvar;
-            break;
-}
-
+    if ($grade == "kindergarten" or $grade == "1"{
+         $groupvar = "Group 1";
+         $campGroup = $groupvar;
+    }
+    else if($grade == "2" or $grade == "3"{
+             $groupvar = $genvar . "4";
+             $campGroup = $groupvar;
+                 }
+                 else if($grade == "4" or $grade == "5"{
+                              $groupvar = $genvar . "4";
+                              $campGroup = $groupvar;
+                                  }
+                                  else if($grade == "6" or $grade == "7"{
+                                               $groupvar = $genvar . "4";
+                                               $campGroup = $groupvar;
+                                                   }
+                                                   else if($grade == "8" or $grade == "9"{
+                                                                $groupvar = "CIT" . $genvar;
+                                                                $campGroup = $groupvar;
+                                                                    }
 // Create camper inside campers table
 $sql = "INSERT INTO campers (fname, lname, age, campGroup, emgnum, grade) VALUES ('$fname', '$lname', '$age', '$campGroup', '$emgNum','$grade')";
 if (!mysqli_query($conn, $sql)){
@@ -63,7 +59,7 @@ if (!mysqli_query($conn, $sql)){
 }
 
 $ID = $conn->query($sql);
-echo "<br>$ID<br>";
+echo "<br>$ID["id"]<br>";
 //Setting other ID's
 //$ID = $sql;
 $accRecID = $sql;
