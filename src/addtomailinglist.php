@@ -27,12 +27,12 @@ else{
     $genvar = G;
     }
 $campGroup = NULL;
-echo"<br>$grade<br>"
+echo"<br>$grade<br>";
 switch($grade){
     case (kindergarten or 1):
         $groupvar = "Group 1";
         $campGroup = $groupvar;
-        echo"<br>Group1<br>"
+        echo"<br>Group1<br>";
         break;
     case (2 or 3):
             $groupvar = $genvar . "2";
@@ -63,7 +63,7 @@ if (!mysqli_query($conn, $sql)){
 }
 
 $ID = $conn->query($sql);
-echo "<br>$ID<br>"
+echo "<br>$ID<br>";
 //Setting other ID's
 //$ID = $sql;
 $accRecID = $sql;
