@@ -14,7 +14,7 @@
 <body>
 <?php
 
-$sql = "INSERT INTO campers (fname, lname, age, campGroup, emgnum, grade) VALUES ('$fname', '$lname', '$age', '$campGroup', '$emgNum','$grade')";
+$sql = "select * from accountsrecievable ORDER BY dateAndTime DESC ";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
