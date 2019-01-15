@@ -69,6 +69,7 @@ if (!$conn) {
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 <?php
+
 $sql = "select * from accountsrecievable ORDER BY dateAndTime ASC ";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -80,16 +81,19 @@ $data = mysqli_query($conn, $sql);
    echo      '<colgroup><col><col><col></colgroup>';
    echo        '<tr>';
    echo         '<th>Date</th>';
-   echo         '<th>Section</th>';
-   echo         '<th>Amount</th>';
+   echo         '<th>Last Name</th>';
+   echo         '<th>Net Total</th>';
    echo    ' </tr>';
    if(mysqli_num_rows($data) > 0) {
         $data_row = mysqli_fetch_assoc($data);
         foreach ($data_row as $row){
+        $ID = $row['accrecID']
+        $sql = "SELECT lname from campers where accrecID = '$ID'"
+        $info = mysqli_query($conn, $sql);
          echo     '<tr>';
          echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
-         echo        ' <td height="50"></td>';
-         echo        ' <td height="50"></td>';
+         echo        ' <td height="50">'. $info . '/td>';
+         echo        ' <td height="50">'.$row['netTotal']'</td>';
          echo    ' </tr>';
    }
    }
