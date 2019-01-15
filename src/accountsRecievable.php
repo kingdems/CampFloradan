@@ -87,7 +87,7 @@ $data = mysqli_query($conn, $sql);
         $data_row = mysqli_fetch_assoc($data);
         //foreach($data_row as $row){
          echo     '<tr>';
-         echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
+         echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
          echo        ' <td height="50"></td>';
          echo        ' <td height="50"></td>';
          echo    ' </tr>';
