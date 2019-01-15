@@ -86,7 +86,7 @@ $row = $data->fetch_assoc();
             <th>Amount</th>
         </tr>
         <tr>
-            <td height="50"><?php echo"<br>$row[\'dateAndTime\']<br>" ?></td>
+            <td height="50"><?php echo"<br>$row[\'dateAndTime\']<br>"; ?></td>
             <td height="50"></td>
             <td height="50">echo"<br>$row[\'\']<br>"</td>
             <td height="50"></td>
