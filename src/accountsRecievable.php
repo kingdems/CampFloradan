@@ -30,7 +30,7 @@ if (!mysqli_query($conn, $sql)){
 $data = $conn->query($sql);
 $row = $data->fetch_assoc();
 ?>
-/*
+
     <div class = "sidenav">
         <img class="imgsize" src="camp.jpeg" />
         <a href="accountsRecievable.php">Accounts Recievable</a>
@@ -41,7 +41,7 @@ $row = $data->fetch_assoc();
         <a href="pool.html">Pool</a>
         <a href="reports.html">Reports</a>
     </div>
-*/
+
 <div class="main">
 
     <h1>Accounts Reciaveable</h1>
@@ -86,7 +86,7 @@ $row = $data->fetch_assoc();
             <th>Amount</th>
         </tr>
         <tr>
-            <td height="50">?echo"<br>$row[\'dateAndTime\']<br>"</td>
+            <td height="50"><?php echo"<br>$row[\'dateAndTime\']<br>" ?></td>
             <td height="50"></td>
             <td height="50">echo"<br>$row[\'\']<br>"</td>
             <td height="50"></td>
