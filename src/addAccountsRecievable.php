@@ -20,7 +20,7 @@ $row = $ID->fetch_assoc();
 
 if($section ==  "Transportation"){
 
-    $sql = "INSERT into accountsrecievable (transportation) VALUES ('$amt') WHERE accrecID = '$row'";
+    $sql = "INSERT into accountsrecievable (transportation) VALUES ('$amt') WHERE accrecID = '$row['accRecID']'";
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
