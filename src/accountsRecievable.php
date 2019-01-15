@@ -91,9 +91,9 @@ $data = mysqli_query($conn, $sql);
         $sql = "SELECT lname from campers where accrecID = '$ID'";
         $info = mysqli_query($conn, $sql);
          echo     '<tr>';
-         echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
+         echo        '<td height="50">' . $row['dateAndTime'][0] . '</td>';
          echo        ' <td height="50">'. $info . '/td>';
-         echo        ' <td height="50">'.$row['netTotal'] . '</td>';
+         echo        ' <td height="50">'. $row['netTotal'][0] . '</td>';
          echo    ' </tr>';
    }
    }
