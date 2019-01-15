@@ -17,10 +17,11 @@ if (!$conn) {
 $sql = "select accRecID from campers where lname = '$lname'";
 $ID = $conn->query($sql);
 $row = $ID->fetch_assoc();
+$data = $row['accRecID'];
 
 if($section ==  "Transportation"){
 
-    $sql = "INSERT into accountsrecievable (transportation) VALUES ('$amt') WHERE accrecID = '$row['accRecID']'";
+    $sql = "INSERT into accountsrecievable (transportation) VALUES ('$amt') WHERE accrecID = '$data'";
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
