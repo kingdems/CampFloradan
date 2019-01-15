@@ -88,7 +88,8 @@ $data = mysqli_query($conn, $sql);
         $data_row = mysqli_fetch_assoc($data);
         foreach ($data_row as $row){
         $ID = $row['accrecID'];
-        $sql = "SELECT lname from campers where accrecID = '$ID'";
+        echo $ID ;
+        $sql = "SELECT lname from campers where accRecID = '$ID'";
         $info = mysqli_query($conn, $sql);
         $get_info = mysqli_fetch_assoc($info);
          echo     '<tr>';
