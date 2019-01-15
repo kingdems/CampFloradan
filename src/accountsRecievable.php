@@ -79,30 +79,30 @@ $data = $conn->query($sql);
 
 $row = $data->fetch_assoc();
 
-   echo  '<table width="750">'
-   echo      '<colgroup><col><col><col></colgroup>'
-   echo        '<tr>'
-   echo         '<th>Date</th>'
-   echo         '<th>Section</th>'
-   echo         '<th>Amount</th>'
-   echo    ' </tr>'
-   echo     '<tr>'
-   echo        '<td height="50">' . $row['dateAndTime'] '</td>'
-   echo        ' <td height="50"></td>'
-   echo        ' <td height="50"></td>'
-   echo    ' </tr>'
-   echo    ' <tr>'
-   echo         '<td height="50"></td>'
-   echo        ' <td height="50"></td>'
-   echo        ' <td height="50"></td>'
-   echo  '  </tr>'
-   echo    ' <tr>'
-   echo        ' <td height="50"></td>'
-   echo       '  <td height="50"></td>'
-   echo        ' <td height="50"></td>'
-   echo    ' </tr>'
+   echo  '<table width="750">';
+   echo      '<colgroup><col><col><col></colgroup>';
+   echo        '<tr>';
+   echo         '<th>Date</th>';
+   echo         '<th>Section</th>';
+   echo         '<th>Amount</th>';
+   echo    ' </tr>';
+   echo     '<tr>';
+   echo        '<td height="50">' . $row['dateAndTime'] '</td>';
+   echo        ' <td height="50"></td>';
+   echo        ' <td height="50"></td>';
+   echo    ' </tr>';
+   echo    ' <tr>';
+   echo         '<td height="50"></td>';
+   echo        ' <td height="50"></td>';
+   echo        ' <td height="50"></td>';
+   echo  '  </tr>';
+   echo    ' <tr>';
+   echo        ' <td height="50"></td>';
+   echo       '  <td height="50"></td>';
+   echo        ' <td height="50"></td>';
+   echo    ' </tr>';
 
-   echo ' </table>'
+   echo ' </table>';
     ?>
 </div>
 
