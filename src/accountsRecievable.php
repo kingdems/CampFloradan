@@ -85,13 +85,13 @@ $data = mysqli_query($conn, $sql);
    echo    ' </tr>';
    if(mysqli_num_rows($data) > 0) {
         $data_row = mysqli_fetch_assoc($data);
-        foreach($data_row as $row){
+        //foreach($data_row as $row){
          echo     '<tr>';
          echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
          echo        ' <td height="50"></td>';
          echo        ' <td height="50"></td>';
          echo    ' </tr>';
-   }
+  // }
    }
    /* echo    ' <tr>';
    echo         '<td height="50"></td>';
