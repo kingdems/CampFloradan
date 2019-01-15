@@ -21,7 +21,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "select * from accountsrecievable ORDER BY dateAndTime DESC ";
+$sql = "select * from accountsrecievable ORDER BY dateAndTime ASC ";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
@@ -86,12 +86,15 @@ $row = $data->fetch_assoc();
    echo         '<th>Section</th>';
    echo         '<th>Amount</th>';
    echo    ' </tr>';
-   echo     '<tr>';
-   echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
-   echo        ' <td height="50"></td>';
-   echo        ' <td height="50"></td>';
-   echo    ' </tr>';
-   echo    ' <tr>';
+   $data_row = mysqli_fetch_assoc($data);
+   foreach($data_row as $row){
+         echo     '<tr>';
+         echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
+         echo        ' <td height="50"></td>';
+         echo        ' <td height="50"></td>';
+         echo    ' </tr>';
+   }
+   /* echo    ' <tr>';
    echo         '<td height="50"></td>';
    echo        ' <td height="50"></td>';
    echo        ' <td height="50"></td>';
@@ -101,7 +104,7 @@ $row = $data->fetch_assoc();
    echo       '  <td height="50"></td>';
    echo        ' <td height="50"></td>';
    echo    ' </tr>';
-
+*/
    echo ' </table>';
     ?>
 </div>
