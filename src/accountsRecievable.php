@@ -88,7 +88,7 @@ $data = mysqli_query($conn, $sql);
         $data_row = mysqli_fetch_assoc($data);
         foreach ($data_row as $row){
         $ID = $row['accrecID']
-        $sql = "SELECT lname from campers where accrecID = '$ID'"
+        $sql = "SELECT lname from campers where accrecID = '$ID'";
         $info = mysqli_query($conn, $sql);
          echo     '<tr>';
          echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
