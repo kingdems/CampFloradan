@@ -14,9 +14,13 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+$sql = "select accRecID from campers where lname = '$lname'";
+$ID = $conn->query($sql);
+$row = $ID->fetch_assoc();
+
 if($section ==  "Transportation"){
 
-    $sql = "INSERT into accountsrecievable (transportation) VALUES ('$amt') ";
+    $sql = "INSERT into accountsrecievable (transportation) VALUES ('$amt') WHERE accrecID = '$row'";
 }
 if($section ==  "Tuition"){
 
