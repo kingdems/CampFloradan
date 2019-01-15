@@ -13,6 +13,13 @@
 
 <body>
 <?php
+session_start();
+
+//creating connection
+$conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
 $sql = "select * from accountsrecievable ORDER BY dateAndTime DESC ";
 if (!mysqli_query($conn, $sql)){

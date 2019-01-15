@@ -14,7 +14,7 @@ $accRecID = NULL;
 $payID = NULL;
 $genvar = NULL;
 
-
+//creating connection
 $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
