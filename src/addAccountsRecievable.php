@@ -31,6 +31,7 @@ if($section ==  "Tuition"){
     $sql = "INSERT into accountsrecievable (tuition) VALUES ('$amt') ";
 }
 
+header("location: reports.html");
 
 mysqli_close($conn);
 ?>
