@@ -19,8 +19,11 @@ if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-?>
 
+$data = $conn->query($sql);
+$row = $data->fetch_assoc();
+?
+/*
     <div class = "sidenav">
         <img class="imgsize" src="camp.jpeg" />
         <a href="accountsRecievable.php">Accounts Recievable</a>
@@ -31,11 +34,11 @@ if (!mysqli_query($conn, $sql)){
         <a href="pool.html">Pool</a>
         <a href="reports.html">Reports</a>
     </div>
-
+*/
 <div class="main">
 
     <h1>Accounts Reciaveable</h1>
-    <form action="createSG.php" method="post">
+    <form action="addAccountsRecievable.php" method="post">
         <div class="form-group">
             <label for="section">What Section? </label>
             <select name="section" id="section">
@@ -76,9 +79,9 @@ if (!mysqli_query($conn, $sql)){
             <th>Amount</th>
         </tr>
         <tr>
+            <td height="50">?echo"<br>$row[\'dateAndTime\']<br>"</td>
             <td height="50"></td>
-            <td height="50"></td>
-            <td height="50"></td>
+            <td height="50">echo"<br>$row[\'\']<br>"</td>
             <td height="50"></td>
         </tr>
         <tr>
