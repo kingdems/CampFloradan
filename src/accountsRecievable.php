@@ -87,7 +87,7 @@ $data = mysqli_query($conn, $sql);
    if(mysqli_num_rows($data) > 0) {
         $data_row = mysqli_fetch_assoc($data);
         foreach ($data_row as $row){
-        $ID = $row['accrecID']
+        $ID = $row['accrecID'];
         $sql = "SELECT lname from campers where accrecID = '$ID'";
         $info = mysqli_query($conn, $sql);
          echo     '<tr>';
