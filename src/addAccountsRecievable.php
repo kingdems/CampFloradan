@@ -4,7 +4,7 @@
 session_start();
 $servername = "127.0.0.1";
 $section = $_POST["section"];
-$pmtnum = $_POST["pmtnum"];
+//$pmtnum = $_POST["pmtnum"];
 $lname = $_POST["lname"];
 $amt = $_POST["amt"];
 
@@ -21,6 +21,9 @@ $row = $ID->fetch_assoc();
 if($section ==  "Transportation"){
 
     $sql = "INSERT into accountsrecievable (transportation) VALUES ('$amt') WHERE accrecID = '$row'";
+    if (!mysqli_query($conn, $sql)){
+    	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 }
 if($section ==  "Tuition"){
 
