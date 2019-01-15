@@ -78,10 +78,9 @@ $row = $data->fetch_assoc();
     </form>
 
     <table width="750">
-        <colgroup><col><col><col><col></colgroup>
+        <colgroup><col><col><col></colgroup>
         <tr>
             <th>Date</th>
-            <th>Person</th>
             <th>Section</th>
             <th>Amount</th>
         </tr>
@@ -89,16 +88,13 @@ $row = $data->fetch_assoc();
             <td height="50"><?php echo $row['dateAndTime']; ?></td>
             <td height="50"></td>
             <td height="50"></td>
-            <td height="50"></td>
         </tr>
         <tr>
             <td height="50"></td>
             <td height="50"></td>
             <td height="50"></td>
-            <td height="50"></td>
         </tr>
         <tr>
-            <td height="50"></td>
             <td height="50"></td>
             <td height="50"></td>
             <td height="50"></td>
