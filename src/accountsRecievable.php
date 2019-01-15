@@ -22,7 +22,7 @@ if (!mysqli_query($conn, $sql)){
 
 $data = $conn->query($sql);
 $row = $data->fetch_assoc();
-?
+?>
 /*
     <div class = "sidenav">
         <img class="imgsize" src="camp.jpeg" />
