@@ -93,7 +93,7 @@ $data = mysqli_query($conn, $sql);
          echo     '<tr>';
          echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
          echo        ' <td height="50">'. $info . '/td>';
-         echo        ' <td height="50">'.$row['netTotal']'</td>';
+         echo        ' <td height="50">'.$row['netTotal'] . '</td>';
          echo    ' </tr>';
    }
    }
