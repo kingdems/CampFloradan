@@ -86,18 +86,18 @@ $data = mysqli_query($conn, $sql);
    echo    ' </tr>';
    if(mysqli_num_rows($data) > 0) {
         $data_row = mysqli_fetch_assoc($data);
-        foreach ($data_row as $row){
+        //foreach ($data_row as $row){
         $ID = $row['accrecID'];
         echo $ID ;
         $sql = "SELECT lname from campers where accRecID = '$ID'";
         $info = mysqli_query($conn, $sql);
         $get_info = mysqli_fetch_assoc($info);
          echo     '<tr>';
-         echo        '<td height="50">' . $row['dateAndTime'][0] . '</td>';
+         echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
          echo        ' <td height="50">'. $get_info['lname'] . '/td>';
-         echo        ' <td height="50">'. $row['netTotal'][0] . '</td>';
+         echo        ' <td height="50">'. $data_row['netTotal'] . '</td>';
          echo    ' </tr>';
-   }
+   //}
    }
    /* echo    ' <tr>';
    echo         '<td height="50"></td>';
