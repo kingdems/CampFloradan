@@ -21,13 +21,6 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "select * from accountsrecievable ORDER BY dateAndTime ASC ";
-if (!mysqli_query($conn, $sql)){
-	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-
-$data = $conn->query($sql);
 ?>
 
     <div class = "sidenav">
@@ -76,8 +69,12 @@ $data = $conn->query($sql);
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 <?php
+$sql = "select * from accountsrecievable ORDER BY dateAndTime ASC ";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 
-$row = $data->fetch_assoc();
+$data = mysqli_query($conn, $sql);
 
    echo  '<table width="750">';
    echo      '<colgroup><col><col><col></colgroup>';
@@ -86,13 +83,15 @@ $row = $data->fetch_assoc();
    echo         '<th>Section</th>';
    echo         '<th>Amount</th>';
    echo    ' </tr>';
-   $data_row = mysqli_fetch_assoc($data);
-   foreach($data_row as $row){
+   if(mysqli_num_rows($data) > 0) {
+        $data_row = mysqli_fetch_assoc($data);
+        foreach($data_row as $row){
          echo     '<tr>';
          echo        '<td height="50">' . $row['dateAndTime'] . '</td>';
          echo        ' <td height="50"></td>';
          echo        ' <td height="50"></td>';
          echo    ' </tr>';
+   }
    }
    /* echo    ' <tr>';
    echo         '<td height="50"></td>';
