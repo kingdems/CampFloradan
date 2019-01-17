@@ -33,6 +33,16 @@ if($section ==  "Tuition"){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
 }
+$sql = "SELECT * from accountsrecievable WHERE addrecID = '$data'";
+$info =  $conn->query($sql);
+$row = info->fetch_assoc();
+$Total = $row["transportation"] + $row["tuition"];
+$netTotal = $Total - $row["paymentTotal"];
+
+$sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
+if (!mysqli_query($conn, $sql)){
+        	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
 
 header("location: reports.html");
 
