@@ -70,7 +70,7 @@ if (!$conn) {
     </form>
 <?php
 
-$sql = "select * from accountsrecievable ORDER BY dateAndTime ASC ";
+$sql = "select * from accountsrecievable ORDER BY dateAndTime DESC ";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
