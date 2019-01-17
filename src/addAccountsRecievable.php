@@ -28,7 +28,10 @@ if($section ==  "Transportation"){
 }
 if($section ==  "Tuition"){
 
-    $sql = "INSERT into accountsrecievable (tuition) VALUES ('$amt') ";
+    $sql = "UPDATE accountsrecievable set tuition = $amt WHERE accrecID = '$data'";
+     if (!mysqli_query($conn, $sql)){
+        	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
 }
 
 header("location: reports.html");

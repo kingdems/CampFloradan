@@ -62,6 +62,7 @@ $ID = $conn->query($sql);
 $row = $ID->fetch_assoc();
 //echo "<br>$row["id"]<br>";
 //Setting other ID's
+echo row["camperID"]
 $ID = $row["camperID"];
 $accRecID = $row["camperID"];
 $payID = $row["camperID"];
