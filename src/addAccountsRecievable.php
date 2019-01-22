@@ -21,7 +21,7 @@ $data = $row['accRecID'];
 
 if($section ==  "Transportation"){
 
-    $sql = "UPDATE accountsrecievable set transportation = $amt AND dateAndTime = GETDATE() WHERE accrecID = '$data'";
+    $sql = "UPDATE accountsrecievable set transportation = $amt WHERE accrecID = '$data'";
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
