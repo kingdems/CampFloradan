@@ -33,11 +33,11 @@ echo"<br>$grade<br>";
          $campGroup = $groupvar;
     }
     else if($grade == "2" or $grade == "3"){
-             $groupvar = $genvar . "4";
+             $groupvar = $genvar . "2";
              $campGroup = $groupvar;
                  }
                  else if($grade == "4" or $grade == "5"){
-                              $groupvar = $genvar . "4";
+                              $groupvar = $genvar . "3";
                               $campGroup = $groupvar;
                                   }
                                   else if($grade == "6" or $grade == "7"){
@@ -53,6 +53,13 @@ $sql = "INSERT INTO campers (fname, lname, age, campGroup, emgnum, grade) VALUES
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+   $sql = "SELECT * FROM campers WHERE lname = '$lname'";
+   $result = $conn->query($sql);
+   if($result->num_rows > 0){
+        $sql = "SELECT accRecID FROM campers WHERE lname = '$lname'";
+        $result = $conn->query($sql);
+        echo result. "<br>";
+   }
 $sql = "SELECT camperID FROM campers WHERE fname = '$fname' AND lname = '$lname'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
