@@ -71,10 +71,11 @@ if (!mysqli_query($conn, $sql)){
 $data = mysqli_query($conn, $sql);
 
    echo  '<table width="750">';
-   echo      '<colgroup><col><col><col></colgroup>';
+   echo      '<colgroup><col><col><col><col></colgroup>';
    echo        '<tr>';
    echo         '<th>Date</th>';
    echo         '<th>Last Name</th>';
+   echo         '<th>First Name</th>';
    echo         '<th>Net Total</th>';
    echo    ' </tr>';
    if(mysqli_num_rows($data) > 0) {
