@@ -25,6 +25,10 @@ if($section ==  "Transportation"){
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
+    $sql = "UPDATE accountsrecievable set dateAndTime = GETDATE() WHERE accrecID = '$data'";
+     if (!mysqli_query($conn, $sql)){
+        	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
 }
 if($section ==  "Tuition"){
 
