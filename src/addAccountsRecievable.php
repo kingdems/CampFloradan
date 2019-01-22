@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
         echo "Transportation: " . $row["transportation"]. " - Tuition: " . $row["tuition"]. "<br>";
         $tuition1 = $row["tuition"];
         $transportation1 = $row["transportation"];
-        $Total = $tuition1 + transportation1;
+        $Total = $tuition1 + $transportation1;
         $netTotal = $Total - $row["paymentTotal"];
 
         $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
