@@ -51,6 +51,10 @@ if (!$conn) {
                     <input type="text" class="form-control" id="lname" placeholder="Enter the last name" name="lname">
                 </div>
         <div class="form-group">
+                     <label for="fname">First Name</label>
+                     <input type="text" class="form-control" id="fname" placeholder="Enter the First name" name="fname">
+               </div>
+        <div class="form-group">
             <label for="amt">Amount </label>
             <input type="text" class="form-control" id="amt" placeholder="Enter the amount" name="amt">
         </div>
@@ -83,6 +87,7 @@ $data = mysqli_query($conn, $sql);
         $get_info = mysqli_fetch_assoc($info);
          echo     '<tr>';
          echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
+         echo        ' <td height="50">'. $data_row['fname'] . '</td>';
          echo        ' <td height="50">'. $get_info['lname'] . '</td>';
          echo        ' <td height="50">'. $data_row['netTotal'] . '</td>';
          echo    ' </tr>';
