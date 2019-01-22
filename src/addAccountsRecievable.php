@@ -28,6 +28,7 @@ if($section ==  "Transportation"){
     $result = $conn->query($sql);
     if($result != NULL){
     echo $result;
+    echo "Something HERE";
     }
     else{
     echo "CURRENT TIME DIDNT WORK";
