@@ -4,7 +4,7 @@
 session_start();
 $servername = "127.0.0.1";
 $section = $_POST["section"];
-//$pmtnum = $_POST["pmtnum"];
+$pmtnum = $_POST["pmtnum"];
 $lname = $_POST["lname"];
 $amt = $_POST["amt"];
 
@@ -18,6 +18,18 @@ $ID = $conn->query($sql);
 $row = $ID->fetch_assoc();
 $data = $row['accRecID'];
 
+if($section ==  "Payment"){
+    $sql = "SELECT paymentTotal FROM accountsrecievable WHERE accrecID = '$data'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $pmtTot = $row["paymentTotal"];
+    $Amount = $pmtTot + $amt;
+
+    $sql = "UPDATE accountsrecievable set paymentTotal = $Amount WHERE accrecID = '$data'";
+    if (!mysqli_query($conn, $sql)){
+    	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
 if($section ==  "Transportation"){
 
     $sql = "UPDATE accountsrecievable set transportation = $amt WHERE accrecID = '$data'";
