@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "Transportation: " . $row["transportation"]. " - Tuition: " . $row["tuition"]. "<br>";
         $tuition1 = $row["tuition"];
-        echo "Tuition: " . tuition1. "<br>";
+        echo "Tuition: " . $tuition1. "<br>";
         $transportation1 = $row["transportation"];
         echo "Transportation: " . $transportation1. "<br>";
         $Total = $tuition1 + $transportation1;
@@ -57,7 +57,11 @@ if ($result->num_rows > 0) {
         if (!mysqli_query($conn, $sql)){
                 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
-                echo "SQL WAS RUN";
+               $sql = "UPDATE accountsrecievable SET netTotal = '$netTotal' WHERE accrecID = '$data'";
+                       //$result = $conn->query($sql);
+                       if (!mysqli_query($conn, $sql)){
+                               	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+                               }
     }
 } else {
     echo "0 results";
