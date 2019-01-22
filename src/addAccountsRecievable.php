@@ -26,7 +26,12 @@ if($section ==  "Transportation"){
     }
     $sq1 = "SELECT CURRENT_TIMESTAMP()";
     $result = $conn->query($sql);
+    if($result != NULL){
     echo $result;
+    }
+    else{
+    echo "CURRENT TIME DIDNT WORK"
+    }
     $sql = "UPDATE accountsrecievable SET dateAndTime = '$result' WHERE accrecID = '$data'";
      if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
