@@ -87,7 +87,7 @@ $data = mysqli_query($conn, $sql);
         $get_info = mysqli_fetch_assoc($info);
          echo     '<tr>';
          echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
-         echo        ' <td height="50">'. $data_info['fname'] . '</td>';
+         echo        ' <td height="50">'. $get_info['fname'] . '</td>';
          echo        ' <td height="50">'. $get_info['lname'] . '</td>';
          echo        ' <td height="50">'. $data_row['netTotal'] . '</td>';
          echo    ' </tr>';
