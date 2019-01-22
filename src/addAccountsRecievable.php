@@ -72,7 +72,7 @@ if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
 */
-header("location: reports.html");
+//header("location: reports.html");
 
 mysqli_close($conn);
 ?>
