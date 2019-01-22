@@ -53,13 +53,6 @@ $sql = "INSERT INTO campers (fname, lname, age, campGroup, emgnum, grade) VALUES
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-   $sql = "SELECT * FROM campers WHERE lname = '$lname'";
-   $result = $conn->query($sql);
-   if($result->num_rows > 0){
-        $sql = "SELECT accRecID FROM campers WHERE lname = '$lname'";
-        $result = $conn->query($sql);
-        echo result. "<br>";
-   }
 $sql = "SELECT camperID FROM campers WHERE fname = '$fname' AND lname = '$lname'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
