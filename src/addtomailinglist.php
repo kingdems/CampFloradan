@@ -98,7 +98,8 @@ if (!mysqli_query($conn, $sql)){
 }
 
   echo "<script type = 'text/javascript'>alert('Congrats! You created a added a camper! Tell your friends! :^D')</script>";
-	header("location: reports.html");
+
+	//header("location: reports.html");
 
 mysqli_close($conn);
 ?>
