@@ -24,7 +24,10 @@ if($section ==  "Transportation"){
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-    $sql = "UPDATE accountsrecievable SET dateAndTime = GETDATE() WHERE accrecID = '$data'";
+    $sq1 = "SELECT CURRENT_TIMESTAMP()";
+    $result = $conn->query($sql);
+    echo $result;
+    $sql = "UPDATE accountsrecievable SET dateAndTime = '$result' WHERE accrecID = '$data'";
      if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
