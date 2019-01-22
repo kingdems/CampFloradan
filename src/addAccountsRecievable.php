@@ -35,14 +35,14 @@ if($section ==  "Tuition"){
 }
 $sql = "SELECT * from accountsrecievable WHERE addrecID = '$data'";
 $result = $conn->query($sql);
-echo $result
+echo $result;
 if (result->num_rows > 0){
     $row = result->fetch_assoc();
     $Total = $row["transportation"] + $row["tuition"];
     $netTotal = $Total - $row["paymentTotal"];
 }
 else{
-    echo "NOTHING IN ACCOUNTSRECIEVABLE TO ADD HERE!!!!"
+    echo "NOTHING IN ACCOUNTSRECIEVABLE TO ADD HERE!!!!";
 }
 $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
 
