@@ -4,7 +4,7 @@
 session_start();
 $servername = "127.0.0.1";
 $section = $_POST["section"];
-$pmtnum = $_POST["pmtnum"];
+//$pmtnum = $_POST["pmtnum"];
 $lname = $_POST["lname"];
 $amt = $_POST["amt"];
 
