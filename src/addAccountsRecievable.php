@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
         $netTotal = $Total - $row["paymentTotal"];
 
         $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
-
+        $result = $conn->query($sql);
         if (!mysqli_query($conn, $sql)){
                 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
