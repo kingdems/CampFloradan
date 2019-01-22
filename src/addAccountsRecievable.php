@@ -35,6 +35,7 @@ if($section ==  "Tuition"){
 }
 $sql = "SELECT * from accountsrecievable WHERE addrecID = '$data'";
 $result = $conn->query($sql);
+echo $result
 if (result->num_rows > 0){
     $row = result->fetch_assoc();
     $Total = $row["transportation"] + $row["tuition"];
