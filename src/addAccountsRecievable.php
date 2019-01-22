@@ -34,12 +34,17 @@ if($section ==  "Tuition"){
         }
 }
 $sql = "SELECT * from accountsrecievable WHERE addrecID = '$data'";
-$info =  $conn->query($sql);
-$row = info->fetch_assoc();
-$Total = $row["transportation"] + $row["tuition"];
-$netTotal = $Total - $row["paymentTotal"];
-
+$result = $conn->query($sql);
+if (result->num_rows > 0){
+    $row = result->fetch_assoc();
+    $Total = $row["transportation"] + $row["tuition"];
+    $netTotal = $Total - $row["paymentTotal"];
+}
+else{
+    echo "NOTHING IN ACCOUNTSRECIEVABLE TO ADD HERE!!!!"
+}
 $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
+
 if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
