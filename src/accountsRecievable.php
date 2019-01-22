@@ -82,7 +82,7 @@ $data = mysqli_query($conn, $sql);
         //foreach ($data_row as $row){
         $ID = $data_row['accrecID'];
         //while($ro w = mysql_fetch_array($data)){
-        $sql = "SELECT lname from campers where accRecID = '$ID'";
+        $sql = "SELECT lname AND fname from campers where accRecID = '$ID'";
         $info = mysqli_query($conn, $sql);
         $get_info = mysqli_fetch_assoc($info);
          echo     '<tr>';
