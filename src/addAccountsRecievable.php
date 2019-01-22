@@ -30,7 +30,7 @@ if($section ==  "Transportation"){
     echo $result;
     }
     else{
-    echo "CURRENT TIME DIDNT WORK"
+    echo "CURRENT TIME DIDNT WORK";
     }
     $sql = "UPDATE accountsrecievable SET dateAndTime = '$result' WHERE accrecID = '$data'";
      if (!mysqli_query($conn, $sql)){
