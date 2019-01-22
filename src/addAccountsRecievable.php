@@ -33,10 +33,31 @@ if($section ==  "Tuition"){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
 }
-$sql = "SELECT * from accountsrecievable WHERE accrecID = '$data'";
+/*$sql = "SELECT * from accountsrecievable WHERE accrecID = '$data'";
 $result = $conn->query($sql);
-echo $result;
+echo $result;*/
+$sql = "SELECT * FROM accountsrecievable WHERE accrecID = '$data'";
+$result = $conn->query($sql);
 
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Transportation: " . $row["transportation"]. " - Tuition: " . $row["tuition"]. "<br>";
+        $tuition1 = $row["tuition"];
+        $transportation1 = $row["transportation"];
+        $Total = $tuition1 + transportation1;
+        $netTotal = $Total - $row["paymentTotal"];
+
+        $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
+
+        if (!mysqli_query($conn, $sql)){
+                	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+    }
+} else {
+    echo "0 results";
+}
+/*
 if (result->num_rows > 0){
     $row = result->fetch_assoc();
     $Total = $row["transportation"] + $row["tuition"];
@@ -50,7 +71,7 @@ $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal
 if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
-
+*/
 header("location: reports.html");
 
 mysqli_close($conn);
