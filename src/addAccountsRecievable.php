@@ -23,7 +23,7 @@ if($section ==  "Transportation"){
     $sql = "UPDATE accountsrecievable set transportation = $amt WHERE accrecID = '$data'";
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+    }/*
     $sq1 = "SELECT CURRENT_TIMESTAMP()";
     $result = $conn->query($sql);
     if($result != NULL){
@@ -36,7 +36,7 @@ if($section ==  "Transportation"){
     $sql = "UPDATE accountsrecievable SET dateAndTime = '$result' WHERE accrecID = '$data'";
      if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+        }*/
 }
 if($section ==  "Tuition"){
 
