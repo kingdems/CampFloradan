@@ -13,7 +13,6 @@ $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-
 $sql = "select accRecID from campers where lname = '$lname'";
 $ID = $conn->query($sql);
 $row = $ID->fetch_assoc();
@@ -25,7 +24,7 @@ if($section ==  "Transportation"){
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-    $sql = "UPDATE accountsrecievable set dateAndTime = GETDATE() WHERE accrecID = '$data'";
+    $sql = "UPDATE accountsrecievable SET dateAndTime = GETDATE() WHERE accrecID = '$data'";
      if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
