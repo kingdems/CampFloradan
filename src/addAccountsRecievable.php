@@ -53,6 +53,7 @@ if ($result->num_rows > 0) {
         if (!mysqli_query($conn, $sql)){
                 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
+                echo "SQL WAS RUN";
     }
 } else {
     echo "0 results";
