@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
         echo "netTotal: " . $netTotal. "<br>";
         echo "accrecID: " . $data. "<br>";
 
-        $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
+        $sql = "UPDATE accountsrecievable SET total = '$Total' WHERE accrecID = '$data'";
         //$result = $conn->query($sql);
         if (!mysqli_query($conn, $sql)){
                 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
