@@ -45,18 +45,7 @@ if (!$conn) {
                 <option value="Transportation">Transportation</option>
                 <option value="Payment">Payment</option>
             </select>
-        </div>/*
-        <div class="form-group">
-            <label for="pmtnum">Payment Number</label>
-            <select name="pmtnum" id="pmtnum" disabled="">
-                <option value="0">Does Not Apply</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>*/
+        </div>
         <div class="form-group">
                     <label for="lname">Last Name</label>
                     <input type="text" class="form-control" id="lname" placeholder="Enter the last name" name="lname">
