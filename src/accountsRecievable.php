@@ -82,12 +82,15 @@ $data = mysqli_query($conn, $sql);
         //foreach ($data_row as $row){
         $ID = $data_row['accrecID'];
         //while($ro w = mysql_fetch_array($data)){
-        $sql = "SELECT lname AND fname from campers where accRecID = '$ID'";
+        $sql = "SELECT lname from campers where accRecID = '$ID'";
         $info = mysqli_query($conn, $sql);
         $get_info = mysqli_fetch_assoc($info);
+        $sql = "SELECT fname from campers WHERE accRecID = '$ID'";
+        $result = mysqli_query($conn, $sql);
+        $get_result = mysqli_fetch_assoc($result);
          echo     '<tr>';
          echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
-         echo        ' <td height="50">'. $get_info['fname'] . '</td>';
+         echo        ' <td height="50">'. $get_result['fname'] . '</td>';
          echo        ' <td height="50">'. $get_info['lname'] . '</td>';
          echo        ' <td height="50">'. $data_row['netTotal'] . '</td>';
          echo    ' </tr>';
