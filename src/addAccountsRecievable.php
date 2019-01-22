@@ -50,6 +50,7 @@ if ($result->num_rows > 0) {
         echo "Total: " . $Total. "<br>";
         $netTotal = $Total - $row["paymentTotal"];
         echo "netTotal: " . $netTotal. "<br>";
+        echo "accrecID: " . $data. "<br>";
 
         $sql = "UPDATE accountsrecievable set total = '$Total' AND netTotal = '$netTotal' WHERE accrecID = '$data'";
         //$result = $conn->query($sql);
