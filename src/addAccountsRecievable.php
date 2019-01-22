@@ -27,7 +27,7 @@ if($section ==  "Transportation"){
     $sq1 = "SELECT CURRENT_TIMESTAMP()";
     $result = $conn->query($sql);
     if($result != NULL){
-    echo "" . $result "<br>";
+    echo "" . $result . "<br>";
     echo "Something HERE <br>";
     }
     else{
