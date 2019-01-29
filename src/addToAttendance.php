@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 
-$sql = "select * from campers WHERE campGroup = '$group' ORDER BY 'lname' DESC"
+$sql = "select * from campers WHERE campGroup = '$group' ORDER BY 'lname' DESC";
 
 if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -21,7 +21,7 @@ if (!mysqli_query($conn, $sql)){
 
 $data = mysqli_query($conn, $sql);
 
-if(mysqli_num_rows($data) > 0){
+    if(mysqli_num_rows($data) > 0){
 
     $C = count($data);
 
@@ -31,21 +31,21 @@ if(mysqli_num_rows($data) > 0){
 }
 
 
-
-if(mysqli_num_rows($data) > 0) {
-            //$data_row = mysqli_fetch_assoc($data);
-
-            while($row = mysqli_fetch_assoc($data)){
-             echo     '<tr>';
-             echo        '<td height="50">' . $row["fname"] . '</td>';
-             echo        ' <td height="50">'. $row["lname"] . '</td>';
-             echo        ' <td height="50">' ?>
-               <form action="addToAttendance.php" method="post">
-             <input type = "checkbox" name="attendance[]" value=1 /><label>PRESENT</label>
-             <?php echo '</td>';
-             echo    ' </tr>';
-       }
-       }
+//
+//if(mysqli_num_rows($data) > 0) {
+//            //$data_row = mysqli_fetch_assoc($data);
+//
+//            while($row = mysqli_fetch_assoc($data)){
+//             echo     '<tr>';
+//             echo        '<td height="50">' . $row["fname"] . '</td>';
+//             echo        ' <td height="50">'. $row["lname"] . '</td>';
+//             echo        ' <td height="50">' ?>
+//               <form action="addToAttendance.php" method="post">
+//             <input type = "checkbox" name="attendance[]" value=1 /><label>PRESENT</label>
+//             <?php echo '</td>';
+//             echo    ' </tr>';
+//       }
+//       }
 if(empty($check)){
     echo "NOTHING IN HERE";
     }
