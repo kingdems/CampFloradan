@@ -3,7 +3,7 @@
 <?php
 session_start();
 $servername = "127.0.0.1";
-$check = $_POST['att'];
+$check = $_POST['attendance'];
 
 
 //creating connection
@@ -12,17 +12,17 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-if (isset($_POST['att'])){
+if (isset($_POST['attendance'])){
     echo "CHECKED!";
     }
 
-if(!empty($_POST['att'])){
+if(!empty($_POST['attendance'])){
 // Loop to store and display values of individual checked checkbox.
-foreach($_POST['att'] as $selected){
+foreach($_POST['attendance'] as $selected){
 echo $selected."</br>";
 }
 }
-echo "PAST ME";
+echo "PAST ME <br>";
 if(empty($check)){
     echo "NOTHING IN HERE";
     }
