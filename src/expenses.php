@@ -14,7 +14,16 @@
 
 </head>
 <body>
+<?php
+session_start();
 
+//creating connection
+$conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+?>
 <div class = "sidenav">
     <img class="imgsize" src="camp.jpeg" />
     <a href="accountsRecievable.php">Accounts Recievable</a>
@@ -29,9 +38,9 @@
 <div class="main">
 
     <h1>Expenses</h1>
-    <form action="expense.php" method="post">
+    <form action="addToExpenses.php" method="post">
         <div class="form-group">
-            <label for="Section">What Section? </label>
+            <label for="section">What Section? </label>
             <select name="section">
                 <option value="Drivers">Drivers</option>
                 <option value="Nurses">Nurses</option>
@@ -49,35 +58,45 @@
             <label for="amt">Amount </label>
             <input type="text" class="form-control" id="amt" placeholder="Enter the amount" name="amt">
         </div>
-
+<button type="submit" class="btn btn-primary">Submit</button>
 
     </form>
-    <table width="750">
-        <colgroup><col><col><col><col></colgroup>
-        <tr>
-            <th>Date</th>
-            <th>Person</th>
-            <th>Expense</th>
-            <th>Amount</th>
-        </tr>
-        <tr>
-            <td height="50"></td>
-            <td height="50"></td>
-            <td height="50"></td>
-            <td height="50"></td>
-        </tr>
-        <tr>
-            <td height="50"></td>
-            <td height="50"></td>
-            <td height="50"></td>
-            <td height="50"></td>
-        </tr>
-        <tr>
-            <td height="50"></td>
-            <td height="50"></td>
-            <td height="50"></td>
-            <td height="50"></td>
-        </tr>
+    <?php
+
+    $sql = "select * from accountsrecievable ORDER BY dateAndTime DESC ";
+    if (!mysqli_query($conn, $sql)){
+    	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $data = mysqli_query($conn, $sql);
+
+       echo  '<table width="750">';
+       echo      '<colgroup><col><col><col><col></colgroup>';
+       echo        '<tr>';
+       echo         '<th>Date</th>';
+       echo         '<th>Last Name</th>';
+       echo         '<th>First Name</th>';
+       echo         '<th>Net Total</th>';
+       echo    ' </tr>';
+       if(mysqli_num_rows($data) > 0) {
+            $data_row = mysqli_fetch_assoc($data);
+            //foreach ($data_row as $row){
+            $ID = $data_row['accrecID'];
+            //while($ro w = mysql_fetch_array($data)){
+            $sql = "SELECT lname from campers where accRecID = '$ID'";
+            $info = mysqli_query($conn, $sql);
+            $get_info = mysqli_fetch_assoc($info);
+            $sql = "SELECT fname from campers WHERE accRecID = '$ID'";
+            $result = mysqli_query($conn, $sql);
+            $get_result = mysqli_fetch_assoc($result);
+            for(i in $result_mysqli_num_rows){
+             echo     '<tr>';
+             echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
+             echo        ' <td height="50">'. $get_result['expense'] . '</td>';
+             echo        ' <td height="50">'. $get_info['amount'] . '</td>';
+             echo    ' </tr>';
+       }
+       }
 
     </table>
 </div>
