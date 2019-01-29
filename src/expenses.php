@@ -83,8 +83,8 @@ if (!$conn) {
             for($x = 0; $x <3; $x++){
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
-             echo        ' <td height="50">'. $get_result['expense'] . '</td>';
-             echo        ' <td height="50">'. $get_info['amount'] . '</td>';
+             echo        ' <td height="50">'. $data_row['expense'] . '</td>';
+             echo        ' <td height="50">'. $data_row['amount'] . '</td>';
              echo    ' </tr>';
        }
        }
