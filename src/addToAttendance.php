@@ -27,7 +27,7 @@ $data = mysqli_query($conn, $sql);
     $C = count($data);
 
      for($i=0;$i < $C; $i++){
-        echo "HERE";
+        echo "HERE <br>";
     }
 }
 
