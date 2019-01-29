@@ -4,7 +4,7 @@
 session_start();
 $servername = "127.0.0.1";
 $check = $_POST['attendance'];
-$session_group = $_SESSION['group']
+$session_group = $_SESSION['group'];
 
 
 //creating connection

@@ -8,7 +8,7 @@
 session_start();
 $servername = "127.0.0.1";
 $group = $_POST["group"];
-$_SESSION['group'] = $session_group
+$_SESSION['group'] = $session_group;
 
 //creating connection
 $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
