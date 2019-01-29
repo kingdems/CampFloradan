@@ -7,8 +7,7 @@
 <?php
 session_start();
 $servername = "127.0.0.1";
-$section = $_POST["section"];
-$amt = $_POST["amt"];
+$group = $_POST["group"];
 
 
 //creating connection
@@ -17,7 +16,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-    $sql = "select * from campers WHERE campGroup = '$section'";
+    $sql = "select * from campers WHERE campGroup = '$group'";
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -27,13 +26,13 @@ if (!$conn) {
        echo  '<table width="750">';
        echo      '<colgroup><col><col><col></colgroup>';
        echo        '<tr>';
-       echo         '<th>Date</th>';
-       echo         '<th>Section</th>';
-       echo         '<th>Amount</th>';
+       echo         '<th>First Name</th>';
+       echo         '<th>Last Name</th>';
+       echo         '<th>Present</th>';
        echo    ' </tr>';
 
         $nums = mysqli_num_rows($data);
-       if(nums > 0) {
+       if($nums > 0) {
             $data_row = mysqli_fetch_assoc($data);
 
             for($x = 0; $x < nums; $x++){
