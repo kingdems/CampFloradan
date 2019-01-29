@@ -16,6 +16,9 @@ switch($section){
     case "Drivers":
         echo "IN DRIVERS";
         $sql = "INSERT INTO expenses(drivers) VALUES ('$amt')";
+        if (!mysqli_query($conn, $sql)){
+        	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
         break;
     case "Nurses":
             echo "IN NURSES";
