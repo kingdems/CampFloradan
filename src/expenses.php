@@ -80,11 +80,11 @@ if (!$conn) {
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
 
-            for($x = 0; $x <3; $x++){
+            for($x = 0; $x <1; $x++){
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
-             echo        ' <td height="50">'. $data_row['expense'] . '</td>';
-             echo        ' <td height="50">'. $data_row['amount'] . '</td>';
+             echo        ' <td height="50">'. $data_row['expID'] . '</td>';
+             echo        ' <td height="50">'. $data_row['driver'] . '</td>';
              echo    ' </tr>';
        }
        }
