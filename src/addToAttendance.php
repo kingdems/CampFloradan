@@ -3,7 +3,7 @@
 <?php
 session_start();
 $servername = "127.0.0.1";
-$check = $_POST['att[]'];
+$check = $_POST['att'];
 
 
 //creating connection
@@ -16,6 +16,13 @@ if (isset($_POST['att'])){
     echo "CHECKED!";
     }
 
+if(!empty($_POST['att'])){
+// Loop to store and display values of individual checked checkbox.
+foreach($_POST['att'] as $selected){
+echo $selected."</br>";
+}
+}
+echo "PAST ME";
 if(empty($check)){
     echo "NOTHING IN HERE";
     }
