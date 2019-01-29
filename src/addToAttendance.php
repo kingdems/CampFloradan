@@ -4,10 +4,7 @@
 session_start();
 $servername = "127.0.0.1";
 $check = $_POST["att[]"];
-//$pmtnum = $_POST["pmtnum"];
-$lname = $_POST["lname"];
-$fname = $_POST["fname"];
-$amt = $_POST["amt"];
+
 
 //creating connection
 $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
