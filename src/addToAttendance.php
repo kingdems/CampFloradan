@@ -48,8 +48,9 @@ else{
     $C = count($check);
 
     echo "You selected $C boxes: ";
-    for($i=0;$i < $C; $i++){
-    echo "$check[$i] <br>";
+    foreach($check as $name=>$val){
+        echo "$val";
+//    echo "$check[$i] <br>";
     }
 }
 
