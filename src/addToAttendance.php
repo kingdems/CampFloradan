@@ -4,6 +4,7 @@
 session_start();
 $servername = "127.0.0.1";
 $check = $_POST['attendance'];
+$session_group = $_SESSION['group']
 
 
 //creating connection
@@ -13,7 +14,7 @@ if (!$conn) {
 }
 
 
-$sql = "select * from campers WHERE campGroup = '$group' ORDER BY 'lname' DESC";
+$sql = "select * from campers WHERE campGroup = '$session_group' ORDER BY 'lname' DESC";
 
 if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
