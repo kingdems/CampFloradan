@@ -1,6 +1,7 @@
 <html>
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -9,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script
+
 
 </head>
 <body>
@@ -19,28 +21,27 @@
     <a href="mailingList.html">Mailing List</a>
     <a href="attendance.html">Attendance</a>
     <a href="expenses.php">Expenses</a>
-    <a href="medical.html">Medical</a>
     <a href="pool.html">Pool</a>
     <a href="reports.html">Reports</a>
 </div>
 
 <div class="main">
 
-    <h1>Attendance</h1>
+    <h1>Pool List</h1>
+
     <form action="createSG.php" method="post">
         <div class="form-group">
-            <label for="attfname">Enter First Name </label>
-            <input type="text" class="form-control" id="attfname" placeholder="First Name" name="attfname">
+            <label for="lname">Last Name </label>
+         <input type="text" class="form-control" id="lname" placeholder="Search by the Last Name" name="lname">
         </div>
         <div class="form-group">
-            <label for="attlname">Enter Last Name </label>
-            <input type="text" class="form-control" id="attlname" placeholder="Last Name" name="attlname">
+            <label for="fname">First Name </label>
+            <input type="text" class="form-control" id="fname" placeholder="Search by the First Name" name="fname">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Search</button>
     </form>
 </div>
-
 
 </body>
 

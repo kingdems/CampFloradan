@@ -28,10 +28,9 @@ if (!$conn) {
     <img class="imgsize" src="camp.jpeg" />
     <a href="accountsRecievable.php">Accounts Recievable</a>
     <a href="mailingList.html">Mailing List</a>
-    <a href="attendance.html">Attendance</a>
-    <a href="expenses.html">Expenses</a>
-    <a href="medical.html">Medical</a>
-    <a href="pool.html">Pool</a>
+    <a href="attendance.php">Attendance</a>
+    <a href="expenses.php">Expenses</a>
+    <a href="pool.php">Pool</a>
     <a href="reports.html">Reports</a>
 </div>
 
@@ -63,7 +62,7 @@ if (!$conn) {
     </form>
     <?php
 
-    $sql = "select * from accountsrecievable ORDER BY dateAndTime DESC ";
+    $sql = "select * from expenses ORDER BY entryDate DESC ";
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -71,33 +70,24 @@ if (!$conn) {
     $data = mysqli_query($conn, $sql);
 
        echo  '<table width="750">';
-       echo      '<colgroup><col><col><col><col></colgroup>';
+       echo      '<colgroup><col><col><col></colgroup>';
        echo        '<tr>';
        echo         '<th>Date</th>';
-       echo         '<th>Last Name</th>';
-       echo         '<th>First Name</th>';
-       echo         '<th>Net Total</th>';
+       echo         '<th>Section</th>';
+       echo         '<th>Amount</th>';
        echo    ' </tr>';
-       /*
+
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
-            //foreach ($data_row as $row){
-            $ID = $data_row['accrecID'];
-            //while($ro w = mysql_fetch_array($data)){
-            $sql = "SELECT lname from campers where accRecID = '$ID'";
-            $info = mysqli_query($conn, $sql);
-            $get_info = mysqli_fetch_assoc($info);
-            $sql = "SELECT fname from campers WHERE accRecID = '$ID'";
-            $result = mysqli_query($conn, $sql);
-            $get_result = mysqli_fetch_assoc($result);
-            for(i in $result_mysqli_num_rows){
+
+            for($x = 0; $x <3; $x++){
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
              echo        ' <td height="50">'. $get_result['expense'] . '</td>';
              echo        ' <td height="50">'. $get_info['amount'] . '</td>';
              echo    ' </tr>';
        }
-       }*/
+       }
 
     echo '</table>';
     ?>
