@@ -51,7 +51,7 @@ switch($section){
 }
 
 //sends to reports.html after this is done
-//header("location: reports.html");
+header("location: reports.html");
 
 mysqli_close($conn);
 ?>
