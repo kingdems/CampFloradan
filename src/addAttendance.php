@@ -47,7 +47,7 @@ if (!$conn) {
        }
        }
 
-       $att_array[] = $_POST('attendance');
+       $att_array[] = $_POST("attendance");
 
 
 ?>
