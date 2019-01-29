@@ -99,7 +99,8 @@ if (!$conn) {
        }
        }*/
 
-    </table>
+    echo '</table>';
+    ?>
 </div>
 </body>
 
