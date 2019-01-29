@@ -15,6 +15,7 @@ if (!$conn) {
 switch($section){
     case "Drivers":
         echo "IN DRIVERS";
+        $sql = "INSERT INTO expenses(drivers) VALUES ('$amt')";
         break;
     case "Nurses":
             echo "IN NURSES";
