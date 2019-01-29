@@ -3,7 +3,7 @@
 <?php
 session_start();
 $servername = "127.0.0.1";
-$check = $_POST["att"];
+$check = $_POST['att'];
 
 
 //creating connection
