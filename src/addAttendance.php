@@ -32,7 +32,7 @@ if (!$conn) {
        echo    ' </tr>';
 
         $nums = mysqli_num_rows($data);
-       if($nums > 0) {
+       if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
 
             for($x = 0; $x < nums; $x++){
