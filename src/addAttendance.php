@@ -35,10 +35,10 @@ if (!$conn) {
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
 
-            while($data_row){
+            while($array_row = mysql_fetch_array($sql){
              echo     '<tr>';
-             echo        '<td height="50">' . $data_row["fname"] . '</td>';
-             echo        ' <td height="50">'. $data_row["lname"] . '</td>';
+             echo        '<td height="50">' . $array_row["fname"] . '</td>';
+             echo        ' <td height="50">'. $array_row["lname"] . '</td>';
              echo        ' <td height="50">' ?> <input type = "checkbox" name="att" value=1 />  <?php echo '</td>';
              echo    ' </tr>';
        }
