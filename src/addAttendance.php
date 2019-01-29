@@ -37,8 +37,8 @@ if (!$conn) {
 
             foreach($data_row as $value){
              echo     '<tr>';
-             echo        '<td height="50">' . $value['fname'] . '</td>';
-             echo        ' <td height="50">'. $value['lname'] . '</td>';
+             echo        '<td height="50">' . $value . '</td>';
+             echo        ' <td height="50">'. $value . '</td>';
              echo        ' <td height="50">' ?> <input type = "checkbox" name="att" value=1 />  <?php echo '</td>';
              echo    ' </tr>';
        }
