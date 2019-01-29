@@ -40,7 +40,7 @@ if (!$conn) {
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['fname'] . '</td>';
              echo        ' <td height="50">'. $data_row['lname'] . '</td>';
-             echo        ' <td height="50">'.?> <input type = "checkbox" name="att" value=1 />  <?php . '</td>';
+             echo        ' <td height="50">' ?> <input type = "checkbox" name="att" value=1 />  <?php echo '</td>';
              echo    ' </tr>';
        }
        }
