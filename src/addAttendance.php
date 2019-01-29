@@ -16,7 +16,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-    $sql = "select * from campers WHERE campGroup = '$group'";
+    $sql = "select * from campers WHERE campGroup = '$group' ORDER BY 'lname' DESC";
     if (!mysqli_query($conn, $sql)){
     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -43,13 +43,13 @@ if (!$conn) {
              echo    ' </tr>';
        }
        }
-       ?>
+
        <form action="addToAttendance.php" method="post">
 
-       <button type="submit" class="btn btn-primary">Submit</button>
+       echo '<button type="submit" class="btn btn-primary">Submit</button>';
         </form>
 
-       <?php
+
 
     echo '</table>';
     ?>
