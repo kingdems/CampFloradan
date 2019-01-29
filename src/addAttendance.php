@@ -33,7 +33,7 @@ if (!$conn) {
 
 
        if(mysqli_num_rows($data) > 0) {
-            $data_row = mysqli_fetch_assoc($data);
+            //$data_row = mysqli_fetch_assoc($data);
 
             while($row = mysqli_fetch_assoc($data)){
              echo     '<tr>';
