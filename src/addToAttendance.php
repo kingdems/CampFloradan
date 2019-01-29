@@ -22,9 +22,9 @@ if(empty($check)){
 else{
     $C = count($check);
 
-    echo ("You selected $C boxes: ");
+    echo "You selected $C boxes: ";
     for($i=0;$i < $C; $i++;){
-    echo ("$check[$i] <br>");
+    echo "$check[$i] <br>";
     }
 }
 
