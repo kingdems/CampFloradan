@@ -45,9 +45,7 @@ if (!$conn) {
        }
 ?>
        <form action="addToAttendance.php" method="post">
-        <?php
-       echo '<button type="submit" class="btn btn-primary">Submit</button>';
-       ?>
+       <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
 <?php
