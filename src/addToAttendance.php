@@ -23,7 +23,7 @@ else{
     $C = count($check);
 
     echo "You selected $C boxes: ";
-    for($i=0;$i < $C; $i++;){
+    for($i=0;$i < $C; $i++){
     echo "$check[$i] <br>";
     }
 }
