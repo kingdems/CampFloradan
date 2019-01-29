@@ -46,10 +46,6 @@ if (!$conn) {
              echo    ' </tr>';
        }
        }
-
-       $att_array[] = $_POST("attendance");
-
-
 ?>
 
        <button type="submit" class="btn btn-primary">Submit</button>
