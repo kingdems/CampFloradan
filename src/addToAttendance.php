@@ -12,6 +12,9 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+if (isset($_POST['att'])){
+    echo "CHECKED!";
+    }
 
 if(empty($check)){
     echo "NOTHING IN HERE";
