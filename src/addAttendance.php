@@ -43,13 +43,14 @@ if (!$conn) {
              echo    ' </tr>';
        }
        }
-
+?>
        <form action="addToAttendance.php" method="post">
-
+        <?php
        echo '<button type="submit" class="btn btn-primary">Submit</button>';
+       ?>
         </form>
 
-
+<?php
 
     echo '</table>';
     ?>
