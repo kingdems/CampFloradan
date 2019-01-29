@@ -39,13 +39,7 @@ $data = mysqli_query($conn, $sql);
 //             echo     '<tr>';
 //             echo        '<td height="50">' . $row["fname"] . '</td>';
 //             echo        ' <td height="50">'. $row["lname"] . '</td>';
-//             echo        ' <td height="50">' ?>
-//               <form action="addToAttendance.php" method="post">
-//             <input type = "checkbox" name="attendance[]" value=1 /><label>PRESENT</label>
-//             <?php echo '</td>';
-//             echo    ' </tr>';
-//       }
-//       }
+
 if(empty($check)){
     echo "NOTHING IN HERE";
     }
