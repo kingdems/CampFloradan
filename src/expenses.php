@@ -78,6 +78,7 @@ if (!$conn) {
        echo         '<th>First Name</th>';
        echo         '<th>Net Total</th>';
        echo    ' </tr>';
+       /*
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
             //foreach ($data_row as $row){
@@ -96,7 +97,7 @@ if (!$conn) {
              echo        ' <td height="50">'. $get_info['amount'] . '</td>';
              echo    ' </tr>';
        }
-       }
+       }*/
 
     </table>
 </div>
