@@ -48,23 +48,7 @@ if (!$conn) {
        <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-<?php
 
-    echo '</table>';
-
-    $check = $_POST['att'];
-    if(empty($check)){
-        echo "NOTHING IN HERE";
-        }
-    else{
-        $C = count($check);
-
-        echo "You selected $C boxes: ";
-        for($i=0;$i < $C; $i++){
-        echo "$check[$i] <br>";
-        }
-    }
-    ?>
 </div>
 </body>
 
