@@ -35,7 +35,7 @@ if (!$conn) {
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
 
-            foreach($data_row as $value{
+            foreach($data_row as $value){
              echo     '<tr>';
              echo        '<td height="50">' . $value['fname'] . '</td>';
              echo        ' <td height="50">'. $value['lname'] . '</td>';
