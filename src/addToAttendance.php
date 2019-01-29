@@ -25,7 +25,7 @@ $data = mysqli_query($conn, $sql);
 
     $C = count($data);
 
-    for($x=0;x < $C; x++){
+    for($x=0;x < $C; x++;){
 
     }
 }
