@@ -49,10 +49,13 @@ foreach($check as $name=>$val){
     $sql = "SELECT daysInCamp FROM campers WHERE camperID = '$ID'";
 
     $att = mysqli_query($conn, $sql);
+    $num = mysql_fetch_assoc($conn,$att);
 
-    $att = $att + 1;
+    $num = $num["daysInCamp"] + 1;
 
-    $sql = "UPDATE `campers` SET `daysInCamp`= '$att' WHERE camperID = '$ID'";
+    $sql = "UPDATE `campers` SET `daysInCamp`= '$num' WHERE camperID = '$ID'";
+
+    echo '$num'
 
     if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
