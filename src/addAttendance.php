@@ -39,7 +39,7 @@ if (!$conn) {
              echo     '<tr>';
              echo        '<td height="50">' . $row["fname"] . '</td>';
              echo        ' <td height="50">'. $row["lname"] . '</td>';
-             echo        ' <td height="50"> <form action="addToAttendance.php" method="post"> <input type = "checkbox" name="attendance[' . $row["fname"] . $row["lname"] . ']" value=1 /><label>PRESENT</label> </td>';
+             echo        ' <td height="50">  <form action="addToAttendance.php" method="post"> <input type = "checkbox" name="attendance[]" value= "' . $row['camperID'] . '"  /><label>PRESENT</label>' . '</td>';
              echo    ' </tr>';
        }
        }
