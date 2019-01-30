@@ -52,7 +52,7 @@ foreach($check as $name=>$val){
     $row = mysqli_fetch_assoc($data);
     echo 'NUMBER ' . $row["daysInCamp"] . '';
     if($row["daysInCamp"] <= 0){
-        $sql = "UPDATE `campers` SET `daysInCamp`=`1 WHERE camperID = '$ID'";
+        $sql = "UPDATE `campers` SET `daysInCamp`= 1 WHERE camperID = '$ID'";
         if (!mysqli_query($conn, $sql)){
                 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
