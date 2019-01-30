@@ -51,7 +51,7 @@ foreach($check as $name=>$val){
     $att = mysqli_query($conn, $sql);
     $num = mysql_fetch_assoc($att);
 
-    $num = $num["daysInCamp"] + 1;
+    $num = $num + 1;
 
     $sql = "UPDATE `campers` SET `daysInCamp`= '$num' WHERE camperID = '$ID'";
 
