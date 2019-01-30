@@ -49,6 +49,7 @@ foreach($check as $name=>$val){
 
     $sql = "SELECT daysInCamp FROM campers WHERE camperID = '$ID'";
     $test = mysqli_query($conn,$sql);
+    echo '' . $test . '';
     if($test == NULL){
         $sql = "UPDATE `campers` SET `daysInCamp`=`1 WHERE camperID = '$ID'";
         if (!mysqli_query($conn, $sql)){
