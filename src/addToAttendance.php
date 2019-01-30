@@ -50,8 +50,8 @@ foreach($check as $name=>$val){
     $sql = "SELECT * FROM campers WHERE camperID = '$ID'";
     $data = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($data)
-    echo 'NUMBER ' . $num["daysInCamp"] . '';
-    if($data == NULL){
+    echo 'NUMBER ' . $row["daysInCamp"] . '';
+    if($row["daysInCamp"] !> 0){
         $sql = "UPDATE `campers` SET `daysInCamp`=`1 WHERE camperID = '$ID'";
         if (!mysqli_query($conn, $sql)){
                 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
