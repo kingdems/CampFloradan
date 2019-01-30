@@ -47,14 +47,25 @@ else{
 foreach($check as $name=>$val){
     $ID = $val;
 
-    $sql = "UPDATE `campers` SET `daysInCamp`=`daysInCamp` + 1 WHERE camperID = '$ID';";
-
-    if (!mysqli_query($conn, $sql)){
-        	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+    $sql = "SELECT daysInCamp FROM campers WHERE camperID = '$ID'";
+    $test = mysqli_query($conn,$sql);
+    if($test == NULL){
+        $sql = "UPDATE `campers` SET `daysInCamp`=`1 WHERE camperID = '$ID'";
+        if (!mysqli_query($conn, $sql)){
+                	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
         }
-    echo '<br> Success';
-}
+    }
+    else{
 
+        $sql = "UPDATE `campers` SET `daysInCamp`=`daysInCamp` + 1 WHERE camperID = '$ID'";
+
+        if (!mysqli_query($conn, $sql)){
+                echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        echo '<br> Success';
+    }
+}
 header("location: reports.html");
 
 mysqli_close($conn);
