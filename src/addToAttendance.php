@@ -55,7 +55,7 @@ foreach($check as $name=>$val){
                 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
         }
-    }
+
     else{
 
         $sql = "UPDATE `campers` SET `daysInCamp`=`daysInCamp` + 1 WHERE camperID = '$ID'";
