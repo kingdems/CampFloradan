@@ -55,7 +55,7 @@ foreach($check as $name=>$val){
 
     $sql = "UPDATE `campers` SET `daysInCamp`= '$num' WHERE camperID = '$ID'";
 
-    echo '$num'
+    echo '$num';
 
     if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
