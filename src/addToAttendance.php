@@ -22,39 +22,43 @@ if (!mysqli_query($conn, $sql)){
 
 $data = mysqli_query($conn, $sql);
 
-    if(mysqli_num_rows($data) > 0){
-
-    $C = count($data);
-
-     for($i=0;$i < $C; $i++){
-        echo "HERE <br>";
-    }
-}
-
-
+//    if(mysqli_num_rows($data) > 0){
 //
-//if(mysqli_num_rows($data) > 0) {
-//            //$data_row = mysqli_fetch_assoc($data);
+//    $C = count($data);
 //
-//            while($row = mysqli_fetch_assoc($data)){
-//             echo     '<tr>';
-//             echo        '<td height="50">' . $row["fname"] . '</td>';
-//             echo        ' <td height="50">'. $row["lname"] . '</td>';
+//     for($i=0;$i < $C; $i++){
+//        echo "HERE <br>";
+//    }
+//}
+
+    $C = count($check);
 
 if(empty($check)){
     echo "NOTHING IN HERE";
     }
 else{
-    $C = count($check);
-
     echo "You selected $C boxes: ";
     foreach($check as $name=>$val){
-        echo "$val";
+        echo "<br> $val";
 //    echo "$check[$i] <br>";
     }
 }
 
+foreach($check as $name=>$val){
+    $ID = $val;
+    $sql = "SELECT daysInCamp FROM campers WHERE camperID = '$ID'";
 
+    $att = mysqli_query($conn, $sql);
+
+    $att = $att + 1;
+
+    $sql = "UPDATE `campers` SET `daysInCamp`= '$att' WHERE camperID = '$ID'";
+
+    if (!mysqli_query($conn, $sql)){
+        	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+    echo 'Success';
+}
 
 //header("location: reports.html");
 
