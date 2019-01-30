@@ -50,12 +50,10 @@ foreach($check as $name=>$val){
 
     $att = mysqli_query($conn, $sql);
     $num = mysql_fetch_assoc($att);
-
+    echo '<br> Before' . $num . '';
     $num = $num + 1;
-
+    echo '<br> After ' . $num . '';
     $sql = "UPDATE `campers` SET `daysInCamp`= '$num' WHERE camperID = '$ID'";
-
-    echo ' ' . $num . '';
 
     if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
