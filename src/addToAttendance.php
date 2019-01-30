@@ -46,14 +46,8 @@ else{
 
 foreach($check as $name=>$val){
     $ID = $val;
-    $sql = "SELECT daysInCamp FROM campers WHERE camperID = '$ID'";
 
-    $att = mysqli_query($conn, $sql);
-    $num = mysql_fetch_assoc($att);
-    echo '<br> Before' . $num . '';
-    $num = $num + 1;
-    echo '<br> After ' . $num . '';
-    $sql = "UPDATE `campers` SET `daysInCamp`= '$num' WHERE camperID = '$ID'";
+    $sql = "UPDATE `campers` SET `daysInCamp`=`daysInCamp` + 1 WHERE camperID = '$ID';";
 
     if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
