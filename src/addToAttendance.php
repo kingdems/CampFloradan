@@ -49,7 +49,7 @@ foreach($check as $name=>$val){
     $sql = "SELECT daysInCamp FROM campers WHERE camperID = '$ID'";
 
     $att = mysqli_query($conn, $sql);
-    $num = mysql_fetch_assoc($conn,$att);
+    $num = mysql_fetch_assoc($att);
 
     $num = $num["daysInCamp"] + 1;
 
@@ -60,7 +60,7 @@ foreach($check as $name=>$val){
     if (!mysqli_query($conn, $sql)){
         	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
         }
-    echo 'Success';
+    echo '<br> Success';
 }
 
 //header("location: reports.html");
