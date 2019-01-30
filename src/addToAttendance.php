@@ -67,7 +67,7 @@ foreach($check as $name=>$val){
         echo '<br> Success';
     }
 }
-header("location: reports.html");
+//header("location: reports.html");
 
 mysqli_close($conn);
 ?>
