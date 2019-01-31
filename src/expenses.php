@@ -84,7 +84,7 @@ if (!$conn) {
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
              echo        ' <td height="50">'. $data_row['expID'] . '</td>';
-             echo        ' <td height="50">'. $data_row['bbq'] . '</td>';
+             echo        ' <td height="50">'. $data_row['bbq'] . $data_row['driver'] . '</td>';
              echo    ' </tr>';
        }
        }
