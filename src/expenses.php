@@ -158,7 +158,7 @@ if (!$conn) {
                     default:
                         echo 'ALL NULL';
                         break;
-
+                }
 
             }
 
