@@ -84,7 +84,7 @@ if (!$conn) {
 
             for($i = 0; $i < 10; $i++){
 
-                switch(i){
+                switch($i){
                     case 1:
                         $col_group = 'drivers';
                         $column = mysqli_query($conn, $sql);
