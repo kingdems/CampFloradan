@@ -79,8 +79,8 @@ if (!$conn) {
 
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
-            $col_name = "";
-            $sql = "SELECT * from expenses WHERE $col_name IS NOT NULL";
+            $col_group = "";
+            $sql = "SELECT * from expenses WHERE $col_group IS NOT NULL";
 
             for($i = 0; $i < 10; $i++){
 
