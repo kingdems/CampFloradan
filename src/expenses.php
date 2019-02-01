@@ -86,6 +86,7 @@ if (!$conn) {
 
                 switch($i){
                     case 1:
+                        echo 'CASE 1';
                         $col_group = 'drivers';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -93,6 +94,7 @@ if (!$conn) {
                             }
                         break;
                     case 2:
+                        echo 'CASE 2';
                         $col_group = 'nurses';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -100,6 +102,7 @@ if (!$conn) {
                         }
                         break;
                     case 3:
+                        echo 'CASE 3';
                         $col_group = 'salaryAdvance';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -107,6 +110,7 @@ if (!$conn) {
                         }
                         break;
                     case 4:
+                        echo 'CASE 4';
                         $col_group = 'snack';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -114,6 +118,7 @@ if (!$conn) {
                         }
                         break;
                     case 5:
+                        echo 'CASE 5';
                         $col_group = 'rainyDay';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -121,6 +126,7 @@ if (!$conn) {
                         }
                         break;
                     case 6:
+                        echo 'CASE 6';
                         $col_group = 'gas';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -128,6 +134,7 @@ if (!$conn) {
                         }
                         break;
                     case 7:
+                        echo 'CASE 7';
                         $col_group = 'bbq';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -135,6 +142,7 @@ if (!$conn) {
                         }
                         break;
                     case 8:
+                        echo 'CASE 8';
                         $col_group = 'sports';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -142,6 +150,7 @@ if (!$conn) {
                         }
                         break;
                     case 9:
+                        echo 'CASE 9';
                         $col_group = 'artsAndCrafts';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
@@ -149,6 +158,7 @@ if (!$conn) {
                         }
                         break;
                     case 10:
+                        echo 'CASE 10';
                         $col_group = 'drivers';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
