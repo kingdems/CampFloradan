@@ -90,6 +90,7 @@ if (!$conn) {
                         $col_group = 'drivers';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                             }
                         break;
@@ -98,6 +99,7 @@ if (!$conn) {
                         $col_group = 'nurses';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -106,6 +108,7 @@ if (!$conn) {
                         $col_group = 'salaryAdvance';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -114,6 +117,7 @@ if (!$conn) {
                         $col_group = 'snack';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -122,6 +126,7 @@ if (!$conn) {
                         $col_group = 'rainyDay';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -130,6 +135,7 @@ if (!$conn) {
                         $col_group = 'gas';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -138,6 +144,7 @@ if (!$conn) {
                         $col_group = 'bbq';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -146,6 +153,7 @@ if (!$conn) {
                         $col_group = 'sports';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -154,6 +162,7 @@ if (!$conn) {
                         $col_group = 'artsAndCrafts';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
@@ -162,6 +171,7 @@ if (!$conn) {
                         $col_group = 'drivers';
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
+                            echo 'column value';
                             $info = $column;
                         }
                         break;
