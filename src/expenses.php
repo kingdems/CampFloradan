@@ -79,11 +79,10 @@ if (!$conn) {
 
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
-            $col_group = "";
-            $sql = "SELECT * from expenses WHERE $col_group IS NOT NULL";
 
-            for($i = 0; $i < 10; $i++){
 
+            for($i = 1; $i < 10; $i++){
+                $sql = "SELECT * from expenses WHERE $col_group IS NOT NULL";
                 switch($i){
                     case 1:
                         echo 'CASE 1';
