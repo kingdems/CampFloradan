@@ -98,7 +98,7 @@ $data = mysqli_query($conn, $sql);
          echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
          echo        ' <td height="50">'. $get_result['fname'] . '</td>';
          echo        ' <td height="50">'. $get_info['lname'] . '</td>';
-         echo        ' <td height="50">'. $data_row['netTotal'] . '</td>';
+         echo        ' <td height="50">'. $net . '</td>';
          echo    ' </tr>';
    //}
    //}
