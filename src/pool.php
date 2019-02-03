@@ -28,20 +28,26 @@
 <div class="main">
 
     <h1>Pool List</h1>
+    <form action="addPoolList.php" method="post">
+         <div class="form-group">
+             <label for="group">What Group? </label>
+             <select name="group">
+                 <option value="GroupOne">Group 1</option>
+                 <option value="B2">B2</option>
+                 <option value="G2">G2</option>
+                 <option value="B3">B3</option>
+                 <option value="G3">G3</option>
+                 <option value="B4">B4</option>
+                 <option value="G4">G4</option>
+                 <option value="CITBOYS">CIT Boys</option>
+                 <option value="CITGIRLS">CIT Girls</option>
+             </select>
+         </div>
 
-    <form action="createSG.php" method="post">
-        <div class="form-group">
-            <label for="lname">Last Name </label>
-         <input type="text" class="form-control" id="lname" placeholder="Search by the Last Name" name="lname">
-        </div>
-        <div class="form-group">
-            <label for="fname">First Name </label>
-            <input type="text" class="form-control" id="fname" placeholder="Search by the First Name" name="fname">
-        </div>
-
-        <button type="submit" class="btn btn-primary">Search</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+
 
 </body>
 

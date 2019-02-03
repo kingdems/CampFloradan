@@ -65,6 +65,7 @@ $row = $ID->fetch_assoc();
 //echo row["camperID"];
 $ID = $row["camperID"];
 $accRecID = $row["camperID"];
+$poolID = $row["camperID"];
 $payID = $row["camperID"];
 
 //insert other ID's
@@ -72,7 +73,15 @@ $sql = "UPDATE campers SET accRecID = '$accRecID'  WHERE camperID = '$ID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+$sql = "UPDATE campers SET PoolID = '$accRecID'  WHERE camperID = '$ID'";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 $sql = "UPDATE campers SET payID = '$payID'  WHERE camperID = '$ID'";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+$sql = "INSERT INTO pool (poolID) VALUES ('$poolID')";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
