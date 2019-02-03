@@ -83,7 +83,7 @@ if (!$conn) {
             $dateTime = $data_row['entryDate'];
 
 
-
+            //NEED TO FIND A WAY TO GET THE COLUMN NAME THAT HAS A VALUE IN IT
             for($x = 0; $x <1; $x++){
 
              echo     '<tr>';

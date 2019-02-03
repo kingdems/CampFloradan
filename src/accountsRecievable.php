@@ -88,6 +88,12 @@ $data = mysqli_query($conn, $sql);
         $sql = "SELECT fname from campers WHERE accRecID = '$ID'";
         $result = mysqli_query($conn, $sql);
         $get_result = mysqli_fetch_assoc($result);
+        if($data_row['netTotal'] == NULL){
+            $net = "$0";
+            }
+        else {
+            $net = '$ ' . $data_row['netTotal' . '';
+        }
          echo     '<tr>';
          echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
          echo        ' <td height="50">'. $get_result['fname'] . '</td>';
