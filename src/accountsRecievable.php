@@ -92,7 +92,7 @@ $data = mysqli_query($conn, $sql);
             $net = "$0";
             }
         else {
-            $net = '$ ' . $data_row['netTotal' . '';
+            $net = '$ ' . $data_row['netTotal'] . '';
         }
          echo     '<tr>';
          echo        '<td height="50">' . $data_row['dateAndTime'] . '</td>';
