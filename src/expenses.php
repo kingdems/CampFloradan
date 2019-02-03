@@ -83,7 +83,7 @@ if (!$conn) {
             $dateTime = $data_row['entryDate'];
 
             for($i = 1; $i < 10; $i++){
-                $sql = "SELECT * from expenses WHERE $col_group IS NOT NULL AND entryDate = $dateTime";
+                $sql = "SELECT * from expenses WHERE $col_group IS NOT NULL";
                 switch($i){
                     case 1:
                         echo 'CASE 1';
@@ -145,7 +145,7 @@ if (!$conn) {
                         $column = mysqli_query($conn, $sql);
                         if($column != NULL){
                             echo 'column bbq';
-                            $info = $column;
+                            $info = $col_group;
                         }
                         break;
                     case 8:
@@ -185,7 +185,7 @@ if (!$conn) {
             for($x = 0; $x <1; $x++){
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
-             echo        ' <td height="50">'. $info . '</td>';
+             echo        ' <td height="50">'. $col_group . '</td>';
              echo        ' <td height="50">'. $data_row['bbq'] . $data_row['drivers'] . '</td>';
              echo    ' </tr>';
        }
