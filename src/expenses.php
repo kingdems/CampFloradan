@@ -79,110 +79,13 @@ if (!$conn) {
 
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
-            $col_group = '';
+            $info = 'FILLER TEXT AND SHIT';
             $dateTime = $data_row['entryDate'];
 
-            for($i = 1; $i < 10; $i++){
-                $sql = "SELECT * from expenses WHERE $col_group IS NOT NULL";
-                switch($i){
-                    case 1:
-                        echo 'CASE 1';
-                        $col_group = 'drivers';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column drivers';
-                            $info = $column;
-                            }
-                        break;
-                    case 2:
-                        echo 'CASE 2';
-                        $col_group = 'nurses';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column nurses';
-                            $info = $column;
-                        }
-                        break;
-                    case 3:
-                        echo 'CASE 3';
-                        $col_group = 'salaryAdvance';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column SA';
-                            $info = $column;
-                        }
-                        break;
-                    case 4:
-                        echo 'CASE 4';
-                        $col_group = 'snack';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column snack';
-                            $info = $column;
-                        }
-                        break;
-                    case 5:
-                        echo 'CASE 5';
-                        $col_group = 'rainyDay';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column RD';
-                            $info = $column;
-                        }
-                        break;
-                    case 6:
-                        echo 'CASE 6';
-                        $col_group = 'gas';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column gas';
-                            $info = $column;
-                        }
-                        break;
-                    case 7:
-                        echo 'CASE 7';
-                        $col_group = 'bbq';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column bbq';
-                            $info = $col_group;
-                        }
-                        break;
-                    case 8:
-                        echo 'CASE 8';
-                        $col_group = 'sports';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column sports';
-                            $info = $column;
-                        }
-                        break;
-                    case 9:
-                        echo 'CASE 9';
-                        $col_group = 'artsAndCrafts';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column aandc';
-                            $info = $column;
-                        }
-                        break;
-                    case 10:
-                        echo 'CASE 10';
-                        $col_group = 'misc';
-                        $column = mysqli_query($conn, $sql);
-                        if($column != NULL){
-                            echo 'column misc';
-                            $info = $column;
-                        }
-                        break;
-                    default:
-                        echo 'ALL NULL';
-                        break;
-                }
 
-            }
 
             for($x = 0; $x <1; $x++){
+
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
              echo        ' <td height="50">'. $info . '</td>';
