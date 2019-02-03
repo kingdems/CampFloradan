@@ -185,7 +185,7 @@ if (!$conn) {
             for($x = 0; $x <1; $x++){
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
-             echo        ' <td height="50">'. $col_group . '</td>';
+             echo        ' <td height="50">'. $info . '</td>';
              echo        ' <td height="50">'. $data_row['bbq'] . $data_row['drivers'] . '</td>';
              echo    ' </tr>';
        }
