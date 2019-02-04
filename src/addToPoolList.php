@@ -47,7 +47,7 @@ else{
 
 //    echo "$check[$i] <br>";
     }
-        echo "<br> $camp_ar[0]";
+        echo "<br> $camp_ar[1]";
 
 }
 
