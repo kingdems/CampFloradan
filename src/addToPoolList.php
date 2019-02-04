@@ -38,9 +38,9 @@ if(empty($check)){
     echo "NOTHING IN HERE";
     }
 else{
-    $camp_ar = explode(', ',$check);
+    $camp_ar = explode(', ',$check[0]);
     echo "<br> Array Sub 0 $camp_ar[0]";
-    echo "You selected $C boxes: ";
+    echo "<br> You selected $C boxes: ";
     foreach($check as $name=>$val){
         echo "<br> $val";
 
