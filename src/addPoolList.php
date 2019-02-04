@@ -39,9 +39,9 @@ if (!$conn) {
              echo     '<tr>';
              echo        '<td height="50">' . $row["fname"] . '</td>';
              echo        ' <td height="50">'. $row["lname"] . '</td>';
-             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "D' . $row['camperID'] . '"  /><label>DEEP</label>' . '</td>';
-             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "M' . $row['camperID'] . '"  /><label>MIDDLE</label>' . '</td>';
-             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "' . $row['camperID'] . ' S "  /><label>SHALLOW</label>' . '</td>';
+             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "' . $row['camperID'] . ', D"  /><label>DEEP</label>' . '</td>';
+             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "' . $row['camperID'] . ', M"  /><label>MIDDLE</label>' . '</td>';
+             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "' . $row['camperID'] . ', S "  /><label>SHALLOW</label>' . '</td>';
              echo    ' </tr>';
        }
        }
