@@ -41,7 +41,7 @@ if (!$conn) {
              echo        ' <td height="50">'. $row["lname"] . '</td>';
              echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "D' . $row['camperID'] . '"  /><label>DEEP</label>' . '</td>';
              echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "M' . $row['camperID'] . '"  /><label>MIDDLE</label>' . '</td>';
-             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "S' . $row['camperID'] . '"  /><label>SHALLOW</label>' . '</td>';
+             echo        ' <td height="50">  <form action="addToPoolList.php" method="post"> <input type = "checkbox" name="pool[]" value= "' . $row['camperID'] . ' S "  /><label>SHALLOW</label>' . '</td>';
              echo    ' </tr>';
        }
        }
