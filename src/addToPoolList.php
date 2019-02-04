@@ -42,27 +42,29 @@ else{
 //    echo "<br> Array Sub 0 $camp_ar[0]";
 //    echo "<br> You selected $C boxes: ";
     foreach($check as $name=>$val){
-        $camp_ar = explode(', ',$val);
+//        $camp_ar = explode(', ',$val);
         echo "<br> $val";
 
 //    echo "$check[$i] <br>";
     }
-        echo "<br> $camp_ar[1]";
+//        echo "<br> $camp_ar[1]";
 
 }
 
-//foreach($check as $name=>$val){
-//    $ID = $val;
-//
-//    $sql = "SELECT * FROM pools WHERE poolID = '$ID'";
-//    $data = mysqli_query($conn, $sql);
-//    $row = mysqli_fetch_assoc($data);
-//
-//    $sql = "UPDATE pool SET poolend = '$val' WHERE poolID = '$ID'";
-//            if (!mysqli_query($conn, $sql)){
-//                    	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
-//                    }
-//            }
+foreach($check as $name=>$val){
+    $ID = $val;
+
+    $pool_ar = explode(', ',$val);
+
+    $sql = "SELECT * FROM pools WHERE poolID = '$pool_ar[0]'";
+    $data = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($data);
+
+    $sql = "UPDATE pool SET poolend = '$pool_ar[1]' WHERE poolID = '$pool_ar[0]'";
+            if (!mysqli_query($conn, $sql)){
+                    	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+            }
 
 //    echo 'NUMBER ' . $row["daysInCamp"] . '';
 //    if($row["daysInCamp"] <= 0){
