@@ -66,25 +66,8 @@ foreach($check as $name=>$val){
                     }
             }
 
-//    echo 'NUMBER ' . $row["daysInCamp"] . '';
-//    if($row["daysInCamp"] <= 0){
-//        $sql = "UPDATE `campers` SET `daysInCamp`= 1 WHERE camperID = '$ID'";
-//        if (!mysqli_query($conn, $sql)){
-//                	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
-//                }
-//        }
-//
-//    else{
-//
-//        $sql = "UPDATE `campers` SET `daysInCamp`=`daysInCamp` + 1 WHERE camperID = '$ID'";
-//
-//        if (!mysqli_query($conn, $sql)){
-//                echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
-//            }
-//        echo '<br> Success';
-//    }
-//}
-//header("location: reports.html");
+
+header("location: reports.html");
 
 mysqli_close($conn);
 ?>
