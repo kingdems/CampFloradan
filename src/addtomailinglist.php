@@ -81,7 +81,7 @@ $sql = "UPDATE campers SET payID = '$payID'  WHERE camperID = '$ID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-$sql = "UPDATE pool SET camperID = '$ID'  WHERE poolID = '$poolID'";
+$sql = "UPDATE pool SET camperID = '$poolID'  WHERE poolID = '$poolID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
