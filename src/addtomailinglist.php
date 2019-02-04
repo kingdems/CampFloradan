@@ -73,11 +73,15 @@ $sql = "UPDATE campers SET accRecID = '$accRecID'  WHERE camperID = '$ID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-$sql = "UPDATE campers SET PoolID = '$accRecID'  WHERE camperID = '$ID'";
+$sql = "UPDATE campers SET PoolID = '$poolID'  WHERE camperID = '$ID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 $sql = "UPDATE campers SET payID = '$payID'  WHERE camperID = '$ID'";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+$sql = "UPDATE pool SET camperID = '$ID'  WHERE poolID = '$poolID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
