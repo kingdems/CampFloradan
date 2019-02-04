@@ -19,7 +19,7 @@
     <img class="imgsize" src="camp.jpeg" />
     <a href="accountsRecievable.php">Accounts Recievable</a>
     <a href="mailingList.html">Mailing List</a>
-    <a href="attendance.html">Attendance</a>
+    <a href="attendance.php">Attendance</a>
     <a href="expenses.php">Expenses</a>
     <a href="pool.html">Pool</a>
     <a href="reports.html">Reports</a>
