@@ -45,12 +45,19 @@ else{
     }
 }
 
-//foreach($check as $name=>$val){
-//    $ID = $val;
-//
-//    $sql = "SELECT * FROM campers WHERE camperID = '$ID'";
-//    $data = mysqli_query($conn, $sql);
-//    $row = mysqli_fetch_assoc($data);
+foreach($check as $name=>$val){
+    $ID = $val;
+
+    $sql = "SELECT * FROM pools WHERE poolID = '$ID'";
+    $data = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($data);
+
+    $sql = "UPDATE pool SET poolend = '$val' WHERE poolID = '$ID'";
+            if (!mysqli_query($conn, $sql)){
+                    	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+            }
+
 //    echo 'NUMBER ' . $row["daysInCamp"] . '';
 //    if($row["daysInCamp"] <= 0){
 //        $sql = "UPDATE `campers` SET `daysInCamp`= 1 WHERE camperID = '$ID'";
