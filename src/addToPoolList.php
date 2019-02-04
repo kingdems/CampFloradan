@@ -43,11 +43,12 @@ else{
 //    echo "<br> You selected $C boxes: ";
     foreach($check as $name=>$val){
         $camp_ar = explode(', ',$val);
-//        echo "<br> $camp_ar";
         echo "<br> $val";
 
 //    echo "$check[$i] <br>";
     }
+        echo "<br> $camp_ar[0]";
+
 }
 
 //foreach($check as $name=>$val){
