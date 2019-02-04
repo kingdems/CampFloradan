@@ -81,15 +81,15 @@ $sql = "UPDATE campers SET payID = '$payID'  WHERE camperID = '$ID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-$sql = "UPDATE pool SET camperID = '$poolID'  WHERE poolID = '$poolID'";
-if (!mysqli_query($conn, $sql)){
-	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
-}
 $sql = "INSERT INTO pool (poolID) VALUES ('$poolID')";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 $sql = "INSERT INTO accountsrecievable (accrecID) VALUES ('$accRecID')";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+$sql = "UPDATE pool SET camperID = '$poolID'  WHERE poolID = '$poolID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
