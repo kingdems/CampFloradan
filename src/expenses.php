@@ -79,12 +79,31 @@ if (!$conn) {
 
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
-            $info = 'FILLER TEXT AND SHIT';
+            $data_arr = mysql_fetch_array($data);
+            for($i=1;$i<11;$i++){
+                switch(i){
+                    case 1:
+                        if($data_arr[i] != NULL){
+                            $info = "drivers";
+                        }
+                        break;
+                    case 7:
+                        if($data_arr[i] != NULL){
+                            $info = "bbq";
+                         }
+                         break;
+                    default:
+                        $info = "Nothing!";
+                        break;
+
+                }
+            }
+
             $dateTime = $data_row['entryDate'];
 
 
             //NEED TO FIND A WAY TO GET THE COLUMN NAME THAT HAS A VALUE IN IT
-            for($x = 0; $x <3; $x++){
+            for($x = 0; $x <1; $x++){
 
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
