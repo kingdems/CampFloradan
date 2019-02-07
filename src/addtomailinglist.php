@@ -93,6 +93,14 @@ $sql = "UPDATE pool SET camperID = '$poolID'  WHERE poolID = '$poolID'";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+$sql = "UPDATE pool SET fname = '$fname'  WHERE poolID = '$poolID'";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+$sql = "UPDATE pool SET lname = '$lname'  WHERE poolID = '$poolID'";
+if (!mysqli_query($conn, $sql)){
+	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 $sql = "INSERT INTO payments (payID) VALUES ('$payID')";
 if (!mysqli_query($conn, $sql)){
 	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
