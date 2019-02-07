@@ -79,21 +79,24 @@ if (!$conn) {
 
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
-            $data_arr = mysql_fetch_array($data);
+            $data_arr = array();
+            while($row =  mysqli_fetch_assoc($data)){
+                $data_arr = $row;
+                }
             for($i=1;$i<11;$i++){
-                switch(i){
+                switch($i){
                     case 1:
-                        if($data_arr[i] != NULL){
+                        if($data_arr[$i] != NULL){
                             $info = "drivers";
                         }
                         break;
                     case 7:
-                        if($data_arr[i] != NULL){
+                        if($data_arr[$i] != NULL){
                             $info = "bbq";
                          }
                          break;
                     default:
-                        $info = "Nothing!";
+//                        $info = "Nothing!";
                         break;
 
                 }
