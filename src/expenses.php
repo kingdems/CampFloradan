@@ -83,7 +83,7 @@ if (!$conn) {
             $i = 0;
             while($row =  mysqli_fetch_assoc($data)){
                 $data_arr[$i] = $row;
-                echo '' . $row . '';
+                echo 'HERE';
                 $i++;
                 }
 
