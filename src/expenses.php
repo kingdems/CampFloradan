@@ -83,7 +83,6 @@ if (!$conn) {
             $i = 0;
             foreach($data_row as $row){
                 $data_arr[$i] = $row;
-                echo 'HERE';
                 $i++;
                 }
 
