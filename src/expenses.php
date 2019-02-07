@@ -80,9 +80,11 @@ if (!$conn) {
        if(mysqli_num_rows($data) > 0) {
             $data_row = mysqli_fetch_assoc($data);
             $data_arr = array();
+            $i = 0;
             while($row =  mysqli_fetch_assoc($data)){
-                $data_arr = $row;
-                echo $row;
+                $data_arr[$i] = $row;
+                echo '' . $row . '';
+                $i++;
                 }
 
             for($i=1;$i<11;$i++){
