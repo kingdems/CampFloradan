@@ -84,7 +84,7 @@ if (!$conn) {
 
 
             //NEED TO FIND A WAY TO GET THE COLUMN NAME THAT HAS A VALUE IN IT
-            for($x = 0; $x <1; $x++){
+            for($x = 0; $x <3; $x++){
 
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
