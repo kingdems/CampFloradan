@@ -82,7 +82,9 @@ if (!$conn) {
             $data_arr = array();
             while($row =  mysqli_fetch_assoc($data)){
                 $data_arr = $row;
+                echo '$row';
                 }
+
             for($i=1;$i<11;$i++){
                 switch($i){
                     case 1:
