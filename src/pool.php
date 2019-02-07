@@ -32,7 +32,7 @@
          <div class="form-group">
              <label for="group">What Group? </label>
              <select name="group">
-                 <option value="GroupOne">Group 1</option>
+                 <option value="Group 1">Group 1</option>
                  <option value="B2">B2</option>
                  <option value="G2">G2</option>
                  <option value="B3">B3</option>
