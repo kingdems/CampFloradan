@@ -90,14 +90,54 @@ if (!$conn) {
                 switch($i){
                     case 1:
                         if($data_arr[$i] != NULL){
+                            $info = "Drivers";
+                        }
+                        break;
+                    case 2:
+                        if($data_arr[$i] != NULL){
+                            $info = "Nurses";
+                        }
+                        break;
+                    case 3:
+                        if($data_arr[$i] != NULL){
+                            $info = "Salary Advances";
+                        }
+                        break;
+                    case 4:
+                        if($data_arr[$i] != NULL){
+                            $info = "Rainy Days";
+                        }
+                        break;
+                    case 5:
+                        if($data_arr[$i] != NULL){
                             $info = "drivers";
+                        }
+                        break;
+                    case 6:
+                        if($data_arr[$i] != NULL){
+                            $info = "Gas";
                         }
                         break;
                     case 7:
                         if($data_arr[$i] != NULL){
-                            $info = "bbq";
+                            $info = "BBQ";
                          }
                          break;
+                    case 8:
+                        if($data_arr[$i] != NULL){
+                            $info = "Sports";
+                        }
+                        break;
+                    case 9:
+                        if($data_arr[$i] != NULL){
+                            $info = "Arts & Crafts";
+                        }
+                        break;
+                    case 10:
+                        if($data_arr[$i] != NULL){
+                            $info = "Misc";
+                        }
+                        break;
                     default:
 //                        $info = "Nothing!";
                         break;
@@ -114,7 +154,7 @@ if (!$conn) {
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
              echo        ' <td height="50">'. $info . '</td>';
-             echo        ' <td height="50">'. $data_row['bbq'] . $data_row['drivers'] . '</td>';
+             echo        ' <td height="50">'. $data_row['bbq'] . $data_row['drivers'] . $data_row['nurses'] . $data_row['salaryAdvance'] . $data_row['snack'] . $data_row['rainyDay'] . $data_row['gas'] . $data_row['sports'] . $data_row['artsAndCrafts'] . $data_row['misc'] '</td>';
              echo    ' </tr>';
        }
        }
