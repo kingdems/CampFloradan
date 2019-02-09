@@ -154,7 +154,7 @@ if (!$conn) {
              echo     '<tr>';
              echo        '<td height="50">' . $data_row['entryDate'] . '</td>';
              echo        ' <td height="50">'. $info . '</td>';
-             echo        ' <td height="50">'. $data_row['bbq'] . $data_row['drivers'] . $data_row['nurses'] . $data_row['salaryAdvance'] . $data_row['snack'] . $data_row['rainyDay'] . $data_row['gas'] . $data_row['sports'] . $data_row['artsAndCrafts'] . $data_row['misc'] '</td>';
+             echo        ' <td height="50">'. $data_row['bbq'] . $data_row['drivers'] . $data_row['nurses'] . $data_row['salaryAdvance'] . $data_row['snack'] . $data_row['rainyDay'] . $data_row['gas'] . $data_row['sports'] . $data_row['artsAndCrafts'] . $data_row['misc'] . '</td>';
              echo    ' </tr>';
        }
        }
