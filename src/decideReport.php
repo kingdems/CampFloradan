@@ -18,7 +18,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-require("fpdf.php");
+require("\fpdf.php");
 
 set_include_path("C:\xampp\php\PEAR");
 
