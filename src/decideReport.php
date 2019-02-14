@@ -18,6 +18,22 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+require("library/fpdf.php");
+
+$pdf = new FPDF('p','mm', 'A4');
+
+$pdf->AddPage();
+
+$pdf->SetFont('Arial', 'B', 14);
+
+if($pool = "pool"){
+
+    $pdf->cell(40,10,"Last Name", 1, 0, 'C');
+
+    $pdf->OutPut();
+
+}
+
 echo $accrec;
 echo $mail;
 echo $att;
