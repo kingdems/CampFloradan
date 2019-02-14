@@ -17,9 +17,8 @@ $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-set_include_path('C:\xampp\php\PEAR');
 
-require("fpdf.php");
+require("library/fpdf.php");
 
 $pdf = new FPDF('p','mm', 'A4');
 
