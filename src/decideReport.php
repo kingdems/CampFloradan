@@ -19,7 +19,7 @@ if (!$conn) {
 }
 set_include_path('C:\xampp\php\PEAR');
 
-require("library\fpdf.php");
+require("fpdf.php");
 
 $pdf = new FPDF('p','mm', 'A4');
 
