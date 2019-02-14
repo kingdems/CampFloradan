@@ -19,10 +19,10 @@ if (!$conn) {
 }
 
 echo $accrec;
-echo $mail
-echo $att
-echo $exp
-echo $pool
+echo $mail;
+echo $att;
+echo $exp;
+echo $pool;
 
 
 ?>
