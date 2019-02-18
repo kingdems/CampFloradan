@@ -28,7 +28,7 @@ if (!$conn) {
        echo        '<tr>';
        echo         '<th>First Name</th>';
        echo         '<th>Last Name</th>';
-       echo         '<th>Present</th>';
+       echo         '<th></th>';
        echo    ' </tr>';
 
 

@@ -25,6 +25,7 @@ if(isset($_POST["expenses"])){
 }
 if(isset($_POST["pool"])){
     $pool = $_POST["pool"];
+    drawPool();
 }
 
 
@@ -32,6 +33,49 @@ $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
+
+
+function drawPool(){
+
+    $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    ?>
+    <form action="reports.html" method="post">
+    <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+    <?php
+     echo  '<table width="750">';
+           echo      '<colgroup><col><col><col></colgroup>';
+           echo        '<tr>';
+           echo         '<th>Name</th>';
+           echo         '<th>Pool End</th>';
+           echo         '<th>Entry Date</th>';
+           echo    ' </tr>';
+
+        $sql = "SELECT * FROM pool ORDER BY entryDate lname";
+        $data = mysqli_query($conn,$sql);
+
+           if(mysqli_num_rows($data) > 0) {
+                //$data_row = mysqli_fetch_assoc($data);
+
+                 while($row = mysqli_fetch_assoc($data)){
+
+
+                 echo     '<tr>';
+                 echo        '<td height="50">' . $row['lname'] . ', ' . $row['fname'] . '</td>';
+                 echo        '<td height="50">' . $row['poolend'] . '</td>';
+                 echo        '<td height="50">' . $row['entryDate'] . '</td>';
+                 echo    ' </tr>';
+
+
+                }
+                }
+
+
+}
+
 
 function drawExp(){
 
@@ -143,7 +187,7 @@ function drawMail(){
     }
     ?>
     <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Back</button>
     </form>
     <?php
      echo  '<table width="750">';
@@ -202,7 +246,7 @@ function drawAccRec(){
     }
     ?>
     <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Back</button>
     </form>
     <?php
      echo  '<table width="750">';
