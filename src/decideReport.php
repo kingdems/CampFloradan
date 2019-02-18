@@ -53,7 +53,7 @@ function drawAccRec(){
                  echo        ' <td height="50">'. $row["netTotal"] . '</td>';
                  echo        ' <td height="50">'. $row["dateAndTime"] . '</td>';
                  echo    ' </tr>';
-
+                }
 
 
 }
