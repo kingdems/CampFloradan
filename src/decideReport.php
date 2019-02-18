@@ -13,6 +13,7 @@ if(isset($_POST["accrec"])){
 }
 if(isset($_POST["maillist"])){
     $mail = $_POST["maillist"];
+    drawMail();
 }
 if(isset($_POST["attendance"])){
     $att = $_POST["attendance"];
