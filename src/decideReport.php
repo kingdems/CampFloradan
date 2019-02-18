@@ -18,7 +18,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-function drawAccRec(){
+function drawAccRec($conn){
      echo  '<table width="750">';
            echo      '<colgroup><col><col><col><col><col><col><col></colgroup>';
            echo        '<tr>';
