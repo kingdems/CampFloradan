@@ -29,6 +29,64 @@ $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
+function drawMail(){
+
+    $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    ?>
+    <form action="reports.html" method="post">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <?php
+     echo  '<table width="750">';
+           echo      '<colgroup><col><col><col></colgroup>';
+           echo        '<tr>';
+           echo         '<th></th>';
+           echo         '<th></th>';
+           echo         '<th></th>';
+           echo    ' </tr>';
+
+        $sql = "SELECT * FROM campers";
+        $data = mysqli_query($conn,$sql);
+
+           if(mysqli_num_rows($data) > 0) {
+                //$data_row = mysqli_fetch_assoc($data);
+            $i = 0;
+            $j = 0;
+            $x = 0;
+
+                 while($row = mysqli_fetch_assoc($data)){
+
+                $ID = $row["camperID"];
+                 $sql = "SELECT address FROM residence WHERE resID = '$ID'";
+                 $info = mysqli_query($conn, $sql);
+                 $add_get = mysqli_fetch_assoc($info);
+                 echo     '<tr>';
+                 if($i == 0){
+                 echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
+                 $i++;
+                 }
+                 if($i == 1){
+                                  echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
+
+                 $i++;
+                 }
+                 if($i == 2){
+                                  echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
+
+                 $i = 0;
+                 }
+
+                 echo    ' </tr>';
+                }
+                }
+
+
+}
+
+
 
 function drawAccRec(){
 
