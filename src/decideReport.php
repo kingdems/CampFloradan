@@ -33,7 +33,9 @@ $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-
+   <form action="reports.html" method="post">
+    <button type="submit" class="btn btn-primary">Back</button>
+    </form>
 
 function drawPool(){
 
@@ -41,12 +43,12 @@ function drawPool(){
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-    ?>
-    <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Back</button>
-    </form>
-    <?php
-     echo  '<table width="750">';
+//    ?>
+//       <form action="reports.html" method="post">
+//        <button type="submit" class="btn btn-primary">Back</button>
+//        </form>
+//    <?php
+           echo  '<table width="750">';
            echo      '<colgroup><col><col><col></colgroup>';
            echo        '<tr>';
            echo         '<th>Name</th>';
@@ -83,11 +85,11 @@ function drawExp(){
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-    ?>
-    <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Back</button>
-    </form>
-    <?php
+//    ?>
+//    <form action="reports.html" method="post">
+//    <button type="submit" class="btn btn-primary">Back</button>
+//    </form>
+//    <?php
      echo  '<table width="750">';
            echo      '<colgroup><col><col><col><col><col><col><col><col><col><col><col></colgroup>';
            echo        '<tr>';
@@ -141,11 +143,11 @@ function drawAtt(){
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-    ?>
-    <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Back</button>
-    </form>
-    <?php
+//    ?>
+//    <form action="reports.html" method="post">
+//    <button type="submit" class="btn btn-primary">Back</button>
+//    </form>
+//    <?php
      echo  '<table width="750">';
            echo      '<colgroup><col><col><col></colgroup>';
            echo        '<tr>';
@@ -185,11 +187,11 @@ function drawMail(){
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-    ?>
-    <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Back</button>
-    </form>
-    <?php
+//    ?>
+//    <form action="reports.html" method="post">
+//    <button type="submit" class="btn btn-primary">Back</button>
+//    </form>
+//    <?php
      echo  '<table width="750">';
            echo      '<colgroup><col><col><col></colgroup>';
            echo        '<tr>';
@@ -244,11 +246,11 @@ function drawAccRec(){
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-    ?>
-    <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Back</button>
-    </form>
-    <?php
+//    ?>
+//    <form action="reports.html" method="post">
+//    <button type="submit" class="btn btn-primary">Back</button>
+//    </form>
+//    <?php
      echo  '<table width="750">';
            echo      '<colgroup><col><col><col><col><col><col><col></colgroup>';
            echo        '<tr>';
