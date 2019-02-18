@@ -54,7 +54,7 @@ function drawPool(){
            echo         '<th>Entry Date</th>';
            echo    ' </tr>';
 
-        $sql = "SELECT * FROM pool ORDER BY entryDate lname";
+        $sql = "SELECT * FROM pool ORDER BY lname DESC";
         $data = mysqli_query($conn,$sql);
 
            if(mysqli_num_rows($data) > 0) {
