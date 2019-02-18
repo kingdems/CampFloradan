@@ -9,6 +9,7 @@ session_start();
 $servername = "127.0.0.1";
 if(isset($_POST["accrec"])){
     $accrec = $_POST["accrec"];
+    drawAccRec();
 }
 if(isset($_POST["maillist"])){
     $mail = $_POST["maillist"];
@@ -78,38 +79,8 @@ function drawAccRec(){
 
 
 }
-if($accrec == "accrec"){
-    $report = "accrec";
-    }
-if($mail == "maillist"){
-    $report = "mail";
-    }
-if($att == "attendance"){
-    $report = "att";
-    }
-if($exp == "expenses"){
-    $report = "exp";
-    }
-if($pool == "pool"){
-    $report = "pool";
-    }
-
-switch($report){
-    case "accrec":
-        drawAccRec();
-        echo "IN HERE";
-        break;
-    default:
-        echo "Not Right";
-        break;
-}
 
 
-echo $accrec;
-echo $mail;
-echo $att;
-echo $exp;
-echo $pool;
 
 
 ?>
