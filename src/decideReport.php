@@ -76,7 +76,7 @@ if($pool == "pool"){
 
 switch($report){
     case "accrec":
-        drawAccRec();
+        drawAccRec($conn);
         echo "IN HERE";
         break;
     default:
