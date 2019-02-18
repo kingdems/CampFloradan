@@ -36,7 +36,11 @@ function drawAccRec(){
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-
+    ?>
+    <form action="reports.html" method="post">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <?php
      echo  '<table width="750">';
            echo      '<colgroup><col><col><col><col><col><col><col></colgroup>';
            echo        '<tr>';
