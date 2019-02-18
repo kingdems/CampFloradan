@@ -17,6 +17,7 @@ if(isset($_POST["maillist"])){
 }
 if(isset($_POST["attendance"])){
     $att = $_POST["attendance"];
+    drawAtt();
 }
 if(isset($_POST["expenses"])){
     $exp = $_POST["expenses"];
@@ -30,6 +31,51 @@ $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
+
+function drawAtt(){
+
+    $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    ?>
+    <form action="reports.html" method="post">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <?php
+     echo  '<table width="750">';
+           echo      '<colgroup><col><col><col></colgroup>';
+           echo        '<tr>';
+           echo         '<th>Name</th>';
+           echo         '<th>Group</th>';
+           echo         '<th>Days in camp</th>';
+           echo    ' </tr>';
+
+        $sql = "SELECT * FROM campers ORDER BY campGroup DESC";
+        $data = mysqli_query($conn,$sql);
+
+           if(mysqli_num_rows($data) > 0) {
+                //$data_row = mysqli_fetch_assoc($data);
+
+                 while($row = mysqli_fetch_assoc($data)){
+
+
+                 echo     '<tr>';
+                 echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '</td>';
+
+                 echo        '<td height="50">' . $row['campGroup'] . '</td>';
+
+                 echo        '<td height="50">' . $row['daysInCamp'] . '</td>';
+
+                 echo    ' </tr>';
+
+
+                }
+                }
+
+
+}
+
 function drawMail(){
 
     $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
