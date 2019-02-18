@@ -8,23 +8,23 @@
 session_start();
 $servername = "127.0.0.1";
 $accrec = $_POST["accrec"];
-if(!isset($_POST["accrec"]{
+if(!isset($_POST["accrec"])){
     $accrec = "NULL";
 }
 $mail = $_POST["maillist"];
-if(!isset($_POST["maillist"]{
+if(!isset($_POST["maillist"])){
     $mail = "NULL";
 }
 $att = $_POST["attendance"];
-if(!isset($_POST["attendance"]{
+if(!isset($_POST["attendance"])){
     $att = "NULL";
 }
 $exp = $_POST["expenses"];
-if(!isset($_POST["expenses"]{
+if(!isset($_POST["expenses"])){
     $exp = "NULL";
 }
 $pool = $_POST["pool"];
-if(!isset($_POST["pool"]{
+if(!isset($_POST["pool"])){
     $pool = "NULL";
 }
 
