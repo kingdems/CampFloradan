@@ -46,7 +46,7 @@ function drawAccRec(){
 
                  while($row = mysqli_fetch_assoc($data)){
 
-                $ID = $row["accrecID"]
+                $ID = $row["accrecID"];
                  $sql = "SELECT * FROM campers WHERE accrecID = '$ID'";
                  $info = mysqli_query($conn, $sql);
                  $name_get = mysql_fetch_assoc($info);
