@@ -54,7 +54,7 @@ function drawAccRec(){
                  $info = mysqli_query($conn, $sql);
                  $lname_get = mysqli_fetch_assoc($info);
                  echo     '<tr>';
-                 echo        '<td height="50">' . $fname_get['fname'] . $lname_get['lname'] . '</td>';
+                 echo        '<td height="50">' . $fname_get['fname'] . '' . $lname_get['lname'] . '</td>';
                  echo        ' <td height="50">'. $row["transportation"] . '</td>';
                  echo        ' <td height="50">'. $row["tuition"] . '</td>';
                  echo        ' <td height="50">'. $row["total"] . '</td>';
