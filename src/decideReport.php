@@ -8,10 +8,26 @@
 session_start();
 $servername = "127.0.0.1";
 $accrec = $_POST["accrec"];
+if(!isset($_POST["accrec"];{
+    $accrec = "";
+}
 $mail = $_POST["maillist"];
+if(!isset($_POST["maillist"];{
+    $mail = "";
+}
 $att = $_POST["attendance"];
+if(!isset($_POST["attendance"];{
+    $att = "";
+}
 $exp = $_POST["expenses"];
+if(!isset($_POST["expenses"];{
+    $exp = "";
+}
 $pool = $_POST["pool"];
+if(!isset($_POST["pool"];{
+    $pool = "";
+}
+
 
 $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
 if (!$conn) {
