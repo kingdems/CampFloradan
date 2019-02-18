@@ -54,6 +54,7 @@ function drawAccRec(){
                  echo        ' <td height="50">'. $row["dateAndTime"] . '</td>';
                  echo    ' </tr>';
                 }
+                }
 
 
 }
