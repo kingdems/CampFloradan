@@ -21,6 +21,7 @@ if(isset($_POST["attendance"])){
 }
 if(isset($_POST["expenses"])){
     $exp = $_POST["expenses"];
+    drawExp();
 }
 if(isset($_POST["pool"])){
     $pool = $_POST["pool"];
@@ -32,6 +33,64 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+function drawExp(){
+
+    $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    ?>
+    <form action="reports.html" method="post">
+    <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+    <?php
+     echo  '<table width="750">';
+           echo      '<colgroup><col><col><col><col><col><col><col><col><col><col><col></colgroup>';
+           echo        '<tr>';
+           echo         '<th>Entry Date</th>';
+           echo         '<th>Drivers</th>';
+           echo         '<th>Nurses</th>';
+           echo         '<th>Salary Advance</th>';
+           echo         '<th>Snack</th>';
+           echo         '<th>Rainy Days</th>';
+           echo         '<th>Gas</th>';
+           echo         '<th>BBQ</th>';
+           echo         '<th>Sports</th>';
+           echo         '<th>A & C</th>';
+           echo         '<th>Misc</th>';
+           echo    ' </tr>';
+
+        $sql = "SELECT * FROM expenses ORDER BY entryDate DESC";
+        $data = mysqli_query($conn,$sql);
+
+           if(mysqli_num_rows($data) > 0) {
+                //$data_row = mysqli_fetch_assoc($data);
+
+                 while($row = mysqli_fetch_assoc($data)){
+
+
+                 echo     '<tr>';
+                 echo        '<td height="50">' . $row['entryDate'] . '</td>';
+                 echo        '<td height="50">' . $row['drivers'] . '</td>';
+                 echo        '<td height="50">' . $row['nurses'] . '</td>';
+                 echo        '<td height="50">' . $row['salaryAdvance'] . '</td>';
+                 echo        '<td height="50">' . $row['snack'] . '</td>';
+                 echo        '<td height="50">' . $row['rainyDay'] . '</td>';
+                 echo        '<td height="50">' . $row['gas'] . '</td>';
+                 echo        '<td height="50">' . $row['bbq'] . '</td>';
+                 echo        '<td height="50">' . $row['sports'] . '</td>';
+                 echo        '<td height="50">' . $row['artsAndCrafts'] . '</td>';
+                 echo        '<td height="50">' . $row['misc'] . '</td>';
+                 echo    ' </tr>';
+
+
+                }
+                }
+
+
+}
+
+
 function drawAtt(){
 
     $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
@@ -40,7 +99,7 @@ function drawAtt(){
     }
     ?>
     <form action="reports.html" method="post">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Back</button>
     </form>
     <?php
      echo  '<table width="750">';
