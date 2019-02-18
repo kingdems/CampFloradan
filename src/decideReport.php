@@ -18,7 +18,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-require("include/fpdf181/fpdf.php");
+require("library/fpdf.php");
 
 $pdf = new FPDF('p','mm', 'A4');
 
