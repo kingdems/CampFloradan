@@ -18,21 +18,71 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-require("library/fpdf.php");
+function drawAccRec(){
+     echo  '<table width="750">';
+           echo      '<colgroup><col><col><col><col><col><col><col></colgroup>';
+           echo        '<tr>';
+           echo         '<th>Name</th>';
+           echo         '<th>Transportation</th>';
+           echo         '<th>Tuition</th>';
+           echo         '<th>Total</th>';
+           echo         '<th>Payments</th>';
+           echo         '<th>Net Total</th>';
+           echo         '<th>Last Updated</th>';
+           echo    ' </tr>';
 
-$pdf = new FPDF('p','mm', 'A4');
+        $sql = "SELECT * FROM accountsrecievable";
+        $data = mysqli_query($conn,$sql);
 
-$pdf->AddPage();
+           if(mysqli_num_rows($data) > 0) {
+                //$data_row = mysqli_fetch_assoc($data);
 
-$pdf->SetFont('Arial', 'B', 14);
 
-if($pool = "pool"){
+                 while($row = mysqli_fetch_assoc($data)){
 
-    $pdf->cell(40,10,"Last Name", 1, 0, 'C');
+                 $sql = "SELECT * FROM campers WHERE accrecID = $row[accrecID]";
+                 $info = mysqli_query($conn, $sql);
+                 $name_get = mysql_fetch_assoc($info);
 
-    $pdf->OutPut();
+                 echo     '<tr>';
+                 echo        '<td height="50">' . $name_get["fname"] . $name_get["lname"] . '</td>';
+                 echo        ' <td height="50">'. $row["transportation"] . '</td>';
+                 echo        ' <td height="50">'. $row["tuition"] . '</td>';
+                 echo        ' <td height="50">'. $row["total"] . '</td>';
+                 echo        ' <td height="50">'. $row["paymentTotal"] . '</td>';
+                 echo        ' <td height="50">'. $row["netTotal"] . '</td>';
+                 echo        ' <td height="50">'. $row["dateAndTime"] . '</td>';
+                 echo    ' </tr>';
+
+
 
 }
+if($accrec == "accrec"){
+    $report = "accrec";
+    }
+if($mail == "maillist"){
+    $report = "mail";
+    }
+if($att == "attendance"){
+    $report = "att";
+    }
+if($exp == "expenses"){
+    $report = "exp";
+    }
+if($pool == "pool"){
+    $report = "pool";
+    }
+
+switch($report){
+    case "accrec":
+        drawAccRec();
+        echo "IN HERE";
+        break;
+    default:
+        echo "Not Right";
+        break;
+}
+
 
 echo $accrec;
 echo $mail;
