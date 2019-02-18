@@ -64,8 +64,8 @@ function drawMail(){
                  $sql = "SELECT address FROM residence WHERE resID = '$ID'";
                  $info = mysqli_query($conn, $sql);
                  $add_get = mysqli_fetch_assoc($info);
-                 echo     '<tr>';
                  if($i == 0){
+                 echo     '<tr>';
                  echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
                  $i++;
                  }
