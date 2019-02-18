@@ -48,7 +48,7 @@ switch($section){
                     	echo "<br>Error: " . $sql . "<br>" . mysqli_error($conn);
                     }
             break;
-    case "GAS":
+    case "Gas":
             echo "IN GAS";
              $sql = "INSERT INTO expenses(gas) VALUES ('$amt')";
                     if (!mysqli_query($conn, $sql)){
