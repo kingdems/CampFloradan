@@ -18,7 +18,13 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-function drawAccRec($conn){
+function drawAccRec(){
+
+    $conn = mysqli_connect("127.0.0.1", "root", "", "campfloradan");
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+
      echo  '<table width="750">';
            echo      '<colgroup><col><col><col><col><col><col><col></colgroup>';
            echo        '<tr>';
@@ -76,7 +82,7 @@ if($pool == "pool"){
 
 switch($report){
     case "accrec":
-        drawAccRec($conn);
+        drawAccRec();
         echo "IN HERE";
         break;
     default:
