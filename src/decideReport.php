@@ -47,12 +47,14 @@ function drawAccRec(){
                  while($row = mysqli_fetch_assoc($data)){
 
                 $ID = $row["accrecID"];
-                 $sql = "SELECT * FROM campers WHERE accrecID = '$ID'";
+                 $sql = "SELECT fname FROM campers WHERE accrecID = '$ID'";
                  $info = mysqli_query($conn, $sql);
-                 $name_get = mysql_fetch_assoc($info);
-
+                 $fname_get = mysqli_fetch_assoc($info);
+                 $sql = "SELECT lname FROM campers WHERE accrecID = '$ID'";
+                 $info = mysqli_query($conn, $sql);
+                 $lname_get = mysqli_fetch_assoc($info);
                  echo     '<tr>';
-                 echo        '<td height="50">' . $name_get["fname"] . $name_get["lname"] . '</td>';
+                 echo        '<td height="50">' . $fname_get['fname'] . $lname_get['lname'] . '</td>';
                  echo        ' <td height="50">'. $row["transportation"] . '</td>';
                  echo        ' <td height="50">'. $row["tuition"] . '</td>';
                  echo        ' <td height="50">'. $row["total"] . '</td>';
