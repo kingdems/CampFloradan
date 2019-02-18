@@ -69,12 +69,12 @@ function drawMail(){
                  echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
                  $i++;
                  }
-                 if($i == 1){
+                 else if($i == 1){
                                   echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
 
                  $i++;
                  }
-                 if($i == 2){
+                 else if($i == 2){
                                   echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
 
                  $i = 0;
