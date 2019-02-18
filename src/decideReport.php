@@ -78,9 +78,9 @@ function drawMail(){
                                   echo        '<td height="50">' . $row['fname'] . ' ' . $row['lname'] . '<br>' . $add_get["address"] . '</td>';
 
                  $i = 0;
+                 echo    ' </tr>';
                  }
 
-                 echo    ' </tr>';
                 }
                 }
 
