@@ -7,25 +7,20 @@
 <?php
 session_start();
 $servername = "127.0.0.1";
-$accrec = $_POST["accrec"];
-if(!isset($_POST["accrec"])){
-    $accrec = "NULL";
+if(isset($_POST["accrec"])){
+    $accrec = $_POST["accrec"];
 }
-$mail = $_POST["maillist"];
-if(!isset($_POST["maillist"])){
-    $mail = "NULL";
+if(isset($_POST["maillist"])){
+    $mail = $_POST["maillist"];
 }
-$att = $_POST["attendance"];
-if(!isset($_POST["attendance"])){
-    $att = "NULL";
+if(isset($_POST["attendance"])){
+    $att = $_POST["attendance"];
 }
-$exp = $_POST["expenses"];
-if(!isset($_POST["expenses"])){
-    $exp = "NULL";
+if(isset($_POST["expenses"])){
+    $exp = $_POST["expenses"];
 }
-$pool = $_POST["pool"];
-if(!isset($_POST["pool"])){
-    $pool = "NULL";
+if(isset($_POST["pool"])){
+    $pool = $_POST["pool"];
 }
 
 
