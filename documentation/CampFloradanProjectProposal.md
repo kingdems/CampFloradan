@@ -28,6 +28,7 @@ There is no software or any process in place as of right now. Everything is bein
 |Mobile Compatability | TBD |
 
 ## Requirements
+
 ###Design Requirements
 
 Primary Pages:
