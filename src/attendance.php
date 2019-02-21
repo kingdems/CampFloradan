@@ -37,8 +37,8 @@
                  <option value="G3">G3</option>
                  <option value="B4">B4</option>
                  <option value="G4">G4</option>
-                 <option value="CITBOYS">CIT Boys</option>
-                 <option value="CITGIRLS">CIT Girls</option>
+                 <option value="CITB">CIT Boys</option>
+                 <option value="CITG">CIT Girls</option>
              </select>
          </div>
 
